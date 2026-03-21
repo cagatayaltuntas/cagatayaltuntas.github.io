@@ -1,95 +1,237 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class="light">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Çağatay Altuntaş</title>
-    <!-- Bootstrap CSS -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
-    <!-- MathJax for LaTeX -->
-    <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
-    <script id="MathJax-script" async
-        src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
-    <link rel="stylesheet" href="style.css">
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Çağatay Altuntaş | Academic Portfolio</title>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;600;700;800&family=Inter:wght@400;500;600&display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+              "tertiary-container": "#112433",
+              "on-surface-variant": "#44474e",
+              "surface-container-low": "#f2f4f7",
+              "on-tertiary-fixed-variant": "#374959",
+              "inverse-primary": "#b2c7ef",
+              "on-secondary-container": "#4f6578",
+              "surface-container-lowest": "#ffffff",
+              "outline-variant": "#c4c6cf",
+              "secondary-container": "#cbe2f8",
+              "inverse-surface": "#2d3133",
+              "on-tertiary-container": "#798c9f",
+              "on-primary-fixed-variant": "#324768",
+              "inverse-on-surface": "#eff1f4",
+              "primary-container": "#0a2342",
+              "on-background": "#191c1e",
+              "primary-fixed": "#d5e3ff",
+              "surface-container": "#eceef1",
+              "surface-container-high": "#e6e8eb",
+              "on-error-container": "#93000a",
+              "on-error": "#ffffff",
+              "on-secondary": "#ffffff",
+              "tertiary-fixed-dim": "#b6c9dd",
+              "surface-tint": "#4a5f81",
+              "on-primary-container": "#768baf",
+              "surface-dim": "#d8dadd",
+              "on-primary-fixed": "#021c3a",
+              "background": "#f7f9fc",
+              "on-tertiary-fixed": "#091d2c",
+              "tertiary": "#000e1a",
+              "surface-bright": "#f7f9fc",
+              "outline": "#74777e",
+              "surface-container-highest": "#e0e3e6",
+              "secondary-fixed": "#cee5fb",
+              "secondary-fixed-dim": "#b2c9df",
+              "on-tertiary": "#ffffff",
+              "error-container": "#ffdad6",
+              "error": "#ba1a1a",
+              "on-secondary-fixed": "#051d2d",
+              "on-primary": "#ffffff",
+              "primary-fixed-dim": "#b2c7ef",
+              "secondary": "#4b6173",
+              "tertiary-fixed": "#d1e5fa",
+              "on-surface": "#191c1e",
+              "surface": "#f7f9fc",
+              "surface-variant": "#e0e3e6",
+              "on-secondary-fixed-variant": "#33495b",
+              "primary": "#000d22"
+            },
+            fontFamily: {
+              "headline": ["Manrope"],
+              "body": ["Inter"],
+              "label": ["Inter"]
+            },
+            borderRadius: {"DEFAULT": "0.125rem", "lg": "0.25rem", "xl": "0.5rem", "full": "0.75rem"},
+          },
+        },
+      }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .glass-nav {
+            backdrop-filter: blur(20px);
+            -webkit-backdrop-filter: blur(20px);
+        }
+        .scholar-indigo-gradient {
+            background: linear-gradient(135deg, #000d22 0%, #0a2342 100%);
+        }
+        @keyframes infinite-scroll {
+            from { transform: translateX(0); }
+            to { transform: translateX(-100%); }
+        }
+        .animate-infinite-scroll {
+            animation: infinite-scroll 40s linear infinite;
+        }
+    </style>
 </head>
-<body>
-    <header class="bg-primary text-white text-center py-4">
-        <div class="container">
-            <h1>Çağatay Altuntaş</h1>
-            <p class="lead">Research Assistant | Istanbul Technical University</p>
-        </div>
-    </header>
-    <nav class="navbar navbar-expand-lg navbar-dark bg-dark sticky-top">
-        <div class="container">
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse" id="navbarNav">
-                <ul class="navbar-nav ms-auto">
-                    <li class="nav-item"><a class="nav-link" href="#about">About</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#publications">Publications</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
-                    <li class="nav-item"><a class="nav-link" href="useful-links.html">Useful Links</a></li>
-                    <li class="nav-item"><a class="nav-link" href="lecture-notes.html">Lecture Notes</a></li>
-                </ul>
+<body class="bg-background font-body text-on-background antialiased">
+<!-- TopNavBar -->
+<nav class="fixed top-0 w-full z-50 bg-white/80 dark:bg-slate-900/80 backdrop-blur-md">
+<div class="flex justify-between items-center px-8 py-4 max-w-7xl mx-auto">
+<div class="text-xl font-bold text-[#0A2342] dark:text-white tracking-tighter font-headline">
+                Academic Portfolio
             </div>
-        </div>
-    </nav>
-    <main class="container my-5">
-        <section id="about" class="mb-5 text-center">
-            <h2 class="text-primary">About</h2>
-            <img src="img/pp.jpg" alt="Çağatay Altuntaş" class="rounded-circle img-thumbnail mb-3" style="width: 150px; height: 150px;">
-            <p>I am a Research Assistant at Istanbul Technical University. I work on the integerness problems on the variations of sums of unit fractions.</p>
-        </section>
-<section id="publications" class="mb-5">
-    <h2 class="text-primary">Publications</h2>
-    <ul style="list-style-type: none; padding-left: 0;">
-        <li>[4] Altuntaş, Çağatay. 
-            <a href="https://doi.org/10.31801/cfsuasmas.1441894" target="_blank">"On the finiteness of some p-divisible sets."</a> 
-            <em>Communications Faculty of Sciences University of Ankara Series A1 Mathematics and Statistics</em>, 73.4 (2024): 1011-1039.
-        </li>
-        <li>[3] Altuntaş, Çağatay. 
-            <a href="https://doi.org/10.4134/BKMS.b220399" target="_blank">"On the $p$-adic valuation of generalized harmonic numbers."</a> 
-            <em>Bulletin of the Korean Mathematical Society</em>, 60.4 (2023): 933-955.
-        </li>
-        <li>[2] Altuntaş, Çağatay, Haydar Göral, and Doğa Can Sertbaş. 
-            <a href="https://doi.org/10.4134/JKMS.j210630" target="_blank">"The difference of hyperharmonic numbers via geometric and analytic methods."</a> 
-            <em>Journal of the Korean Mathematical Society</em>, 59.6 (2022): 1103-1137.
-        </li>
-        <li>[1] Altuntaş, Çağatay, and Haydar Göral. 
-            <a href="http://dx.doi.org/10.1007/s12044-021-00643-6" target="_blank">"Dedekind harmonic numbers."</a> 
-            <em>Proceedings-Mathematical Sciences</em>, 131.2 (2021): 46.
-        </li>
-    </ul>
+<div class="hidden md:flex items-center space-x-8 font-headline font-semibold tracking-tight">
+<a class="text-slate-500 dark:text-slate-400 hover:text-[#0A2342] dark:hover:text-white transition-colors" href="#home">Home</a>
+<a class="text-slate-500 dark:text-slate-400 hover:text-[#0A2342] dark:hover:text-white transition-colors" href="#education">Education</a>
+<a class="text-slate-500 dark:text-slate-400 hover:text-[#0A2342] dark:hover:text-white transition-colors" href="publications.html">Publications</a>
+<a class="text-slate-500 dark:text-slate-400 hover:text-[#0A2342] dark:hover:text-white transition-colors" href="#">Teaching</a>
+<a class="text-slate-500 dark:text-slate-400 hover:text-[#0A2342] dark:hover:text-white transition-colors" href="useful-links.html">Links</a>
+</div>
+<button class="bg-primary-container text-white px-6 py-2 rounded-xl font-headline font-semibold hover:opacity-80 transition-opacity active:scale-95">
+                Contact
+            </button>
+</div>
+</nav>
+<main class="pt-32 pb-24 px-6 max-w-7xl mx-auto">
+<!-- Hero Section -->
+<header id="home" class="mb-24">
+<div class="flex flex-col md:flex-row md:items-end justify-between gap-8">
+<div class="max-w-2xl">
+<span class="font-label text-sm uppercase tracking-widest text-on-primary-container mb-4 block">Mathematical Research • Çağatay Altuntaş</span>
+<h1 class="font-headline text-5xl md:text-7xl font-extrabold text-primary tracking-tighter leading-none mb-6">
+                        Academic Excellence
+                    </h1>
+<p class="font-body text-lg text-secondary leading-relaxed">
+                        Dedicated research in harmonic numbers, p-adic valuations, and advanced mathematical analysis. Contributing to knowledge through rigorous inquiry and pedagogical excellence.
+                    </p>
+</div>
+<div class="flex gap-12">
+<div class="text-center">
+<div class="font-headline text-4xl font-bold text-primary">15+</div>
+<div class="font-label text-xs uppercase tracking-widest text-on-surface-variant">Years Experience</div>
+</div>
+<div class="text-center">
+<div class="font-headline text-4xl font-bold text-primary">4</div>
+<div class="font-label text-xs uppercase tracking-widest text-on-surface-variant">Publications</div>
+</div>
+</div>
+</div>
+</header>
+<!-- Education Section -->
+<section id="education" class="mb-32">
+<h2 class="font-headline text-3xl font-bold text-primary border-l-4 border-primary pl-6 mb-12">Education</h2>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+<!-- Ph.D Card -->
+<div class="bg-surface-container-lowest p-10 rounded-xl border border-outline-variant/10 transition-all hover:shadow-[0_12px_40px_rgba(25,28,30,0.06)]">
+<div class="w-14 h-14 bg-primary-container rounded-xl flex items-center justify-center mb-6">
+<span class="material-symbols-outlined text-white text-2xl">school</span>
+</div>
+<span class="font-label text-xs font-black text-on-primary-container mb-3 block tracking-wider uppercase">Doctoral Studies</span>
+<h3 class="text-2xl font-bold text-on-surface mb-3">Ph.D. in Mathematics</h3>
+<p class="text-on-surface-variant font-body text-sm mb-4">Istanbul Technical University (ITU)</p>
+<p class="text-xs text-on-surface-variant leading-relaxed">Focus on p-adic valuations, harmonic numbers, and advanced mathematical analysis.</p>
+</div>
+<!-- Master Card -->
+<div class="md:col-span-2 scholar-indigo-gradient p-12 rounded-2xl text-white relative overflow-hidden flex flex-col md:flex-row gap-8 shadow-xl">
+<div class="relative z-10 flex-1">
+<span class="font-label text-xs font-black text-primary-fixed mb-3 block uppercase tracking-[0.2em]">Graduate Studies</span>
+<h3 class="text-3xl font-bold mb-4 tracking-tight">M.Sc. in Mathematics</h3>
+<p class="text-slate-300 font-body leading-relaxed mb-6 text-sm">Koç University. Specialized in computational mathematics and advanced theoretical frameworks.</p>
+</div>
+<div class="absolute top-0 left-0 w-full h-full bg-[radial-gradient(circle_at_top_right,_var(--tw-gradient-from),_transparent_60%)] from-white/5 to-transparent"></div>
+</div>
+<!-- Bachelor Card -->
+<div class="bg-surface-container-highest p-8 rounded-2xl border border-outline-variant/10">
+<h3 class="text-xl font-bold text-on-surface mb-2">B.Sc. in Mathematics</h3>
+<p class="text-on-surface-variant font-body text-sm">Izmir University of Economics</p>
+<div class="mt-4 flex gap-2">
+<span class="w-2 h-2 rounded-full bg-primary"></span>
+<span class="w-2 h-2 rounded-full bg-primary/40"></span>
+<span class="w-2 h-2 rounded-full bg-primary/10"></span>
+</div>
+</div>
+</div>
 </section>
-        <section id="contact" class="mb-5">
-            <h2 class="text-primary">Contact</h2>
-            <p>Email: <a href="mailto:caltuntas@itu.edu.tr">caltuntas@itu.edu.tr</a></p>
-            <p>
-                <strong>Find me on:</strong>
-                <ul class="list-inline">
-                    <li class="list-inline-item">
-                        <a href="https://orcid.org/0000-0001-8582-4305" target="_blank" class="btn btn-outline-primary btn-sm">ORCID</a>
-                    </li>
-                    <li class="list-inline-item">
-                        <a href="https://scholar.google.com/citations?user=-iULWGcAAAAJ" target="_blank" class="btn btn-outline-primary btn-sm">Google Scholar</a>
-                    </li>
-                    <li class="list-inline-item">
-                        <a href="https://www.semanticscholar.org/author/2141423935" target="_blank" class="btn btn-outline-primary btn-sm">Semantic Scholar</a>
-                    </li>
-                    <li class="list-inline-item">
-                        <a href="https://www.researchgate.net/profile/Cagatay_Altuntas" target="_blank" class="btn btn-outline-primary btn-sm">ResearchGate</a>
-                    </li>
-                </ul>
-            </p>
-        </section>
-    </main>
-    <footer class="bg-dark text-white text-center py-3">
-        <div class="container">
-            <p>&copy; 2025 Çağatay Altuntaş. All rights reserved.</p>
-        </div>
-    </footer>
-    <!-- Bootstrap Bundle with Popper -->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+<!-- Research Highlights -->
+<section class="mb-32">
+<h2 class="font-headline text-3xl font-bold text-primary mb-12">Recent Publications</h2>
+<div class="space-y-6">
+<article class="bg-surface-container-lowest p-8 rounded-xl transition-all hover:shadow-[0_12px_40px_rgba(25,28,30,0.06)]">
+<div class="flex gap-4 mb-4">
+<span class="text-3xl font-extrabold text-primary-fixed-variant/20">01</span>
+<div class="flex-1">
+<h3 class="text-xl font-bold text-on-surface mb-2">On the finiteness of some p-divisible sets</h3>
+<p class="text-sm text-on-surface-variant mb-3"><strong>Altuntaş, Çağatay.</strong> <em>Communications Faculty of Sciences University of Ankara Series A1 Mathematics and Statistics</em>, 73.4 (2024): 1011-1039.</p>
+<a href="https://doi.org/10.31801/cfsuasmas.1441894" target="_blank" class="text-primary font-semibold text-sm hover:underline">DOI: 10.31801/cfsuasmas.1441894 →</a>
+</div>
+</div>
+</article>
+<article class="bg-surface-container-lowest p-8 rounded-xl transition-all hover:shadow-[0_12px_40px_rgba(25,28,30,0.06)]">
+<div class="flex gap-4 mb-4">
+<span class="text-3xl font-extrabold text-primary-fixed-variant/20">02</span>
+<div class="flex-1">
+<h3 class="text-xl font-bold text-on-surface mb-2">On the p-adic valuation of generalized harmonic numbers</h3>
+<p class="text-sm text-on-surface-variant mb-3"><strong>Altuntaş, Çağatay.</strong> <em>Bulletin of the Korean Mathematical Society</em>, 60.4 (2023): 933-955.</p>
+<a href="https://doi.org/10.4134/BKMS.b220399" target="_blank" class="text-primary font-semibold text-sm hover:underline">DOI: 10.4134/BKMS.b220399 →</a>
+</div>
+</div>
+</article>
+<div class="text-center mt-8">
+<a href="publications.html" class="inline-block bg-primary text-white px-8 py-3 rounded-xl font-headline font-semibold hover:opacity-90 transition-all">
+                    View All Publications
+                </a>
+</div>
+</div>
+</section>
+<!-- Contact CTA -->
+<section class="scholar-indigo-gradient rounded-3xl p-16 text-center relative overflow-hidden shadow-2xl">
+<div class="relative z-10">
+<h2 class="text-4xl md:text-5xl font-bold text-white mb-6 tracking-tight">Let's collaborate on research.</h2>
+<p class="text-primary-fixed/80 max-w-2xl mx-auto mb-10 text-lg">
+                    Open to research collaborations, PhD supervisions, and academic partnerships.
+                </p>
+<div class="flex flex-col sm:flex-row justify-center gap-4">
+<a href="mailto:caltuntas@itu.edu.tr" class="bg-white text-primary px-8 py-3 rounded-xl font-headline font-semibold hover:scale-105 transition-all shadow-lg">Get in Touch</a>
+<button class="bg-white/10 text-white backdrop-blur-md border border-white/20 px-8 py-3 rounded-xl font-headline font-semibold hover:bg-white/20 transition-all">Learn More</button>
+</div>
+</div>
+<div class="absolute top-0 right-0 w-96 h-96 bg-white/10 rounded-full blur-3xl -mr-48 -mt-48"></div>
+</section>
+</main>
+<!-- Footer -->
+<footer class="w-full mt-24 bg-[#0A2342]">
+<div class="flex flex-col md:flex-row justify-between items-center px-12 py-16 w-full max-w-7xl mx-auto">
+<div class="text-lg font-bold text-white mb-8 md:mb-0 font-headline tracking-tighter">
+                Academic Portfolio
+            </div>
+<div class="flex flex-wrap justify-center gap-8 font-body text-sm uppercase tracking-widest text-slate-300">
+<a class="hover:text-white transition-colors hover:underline decoration-1 underline-offset-4" href="https://orcid.org/0000-0001-8582-4305" target="_blank">ORCID</a>
+<a class="hover:text-white transition-colors hover:underline decoration-1 underline-offset-4" href="https://scholar.google.com/citations?user=-iULWGcAAAAJ" target="_blank">Google Scholar</a>
+<a class="hover:text-white transition-colors hover:underline decoration-1 underline-offset-4" href="https://www.semanticscholar.org/author/2141423935" target="_blank">Semantic Scholar</a>
+<a class="hover:text-white transition-colors hover:underline decoration-1 underline-offset-4" href="https://www.researchgate.net/profile/Cagatay_Altuntas" target="_blank">ResearchGate</a>
+</div>
+<div class="mt-8 md:mt-0 font-body text-[10px] uppercase tracking-[0.2em] text-slate-500">
+                © 2026 Çağatay Altuntaş. All rights reserved.
+            </div>
+</div>
+</footer>
 </body>
 </html>
