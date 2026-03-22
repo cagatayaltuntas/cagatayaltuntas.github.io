@@ -28,105 +28,130 @@
 </head>
 <body class="bg-background font-body text-slate-900 antialiased">
 
+<!-- Navigasyon -->
 <nav class="fixed top-0 w-full z-50 bg-white/80 backdrop-blur-md border-b border-slate-100">
     <div class="flex justify-between items-center px-8 py-4 max-w-7xl mx-auto">
         <div class="text-xl font-bold text-[#0A2342] tracking-tighter font-headline">Academic Portfolio</div>
-        <div class="hidden md:flex items-center space-x-8 font-headline font-semibold text-sm uppercase tracking-tight">
+        <div class="hidden md:flex items-center space-x-8 font-headline font-semibold text-xs uppercase tracking-tight">
             <a class="text-[#0A2342] border-b-2 border-[#0A2342]" href="index.html">Home</a>
+            <a class="text-slate-500 hover:text-[#0A2342] transition-colors" href="blog.html">Blog</a>
             <a class="text-slate-500 hover:text-[#0A2342] transition-colors" href="publications.html">Publications</a>
             <a class="text-slate-500 hover:text-[#0A2342] transition-colors" href="teaching.html">Teaching</a>
             <a class="text-slate-500 hover:text-[#0A2342] transition-colors" href="useful-links.html">Links</a>
         </div>
-        <a href="mailto:caltuntas@itu.edu.tr" class="bg-primary-container text-white px-6 py-2 rounded-xl font-headline font-semibold hover:opacity-80 transition-opacity">Contact</a>
+        <a href="#contact" class="bg-primary-container text-white px-6 py-2 rounded-xl font-headline font-semibold hover:opacity-80 transition-opacity">Contact</a>
     </div>
 </nav>
 
 <main class="pt-32 pb-24 px-6 max-w-7xl mx-auto">
+    <!-- Hero Bölümü -->
     <header class="mb-24 flex flex-col md:flex-row md:items-end justify-between gap-8">
         <div class="max-w-2xl">
             <span class="font-label text-sm uppercase tracking-widest text-slate-500 mb-4 block">Mathematical Research • Çağatay Altuntaş</span>
             <h1 class="font-headline text-5xl md:text-7xl font-extrabold text-primary tracking-tighter leading-none mb-6">Academic Excellence</h1>
             <p class="text-lg text-secondary leading-relaxed">Dedicated research in harmonic numbers, p-adic valuations, and advanced mathematical analysis at Istanbul Technical University.</p>
         </div>
-        <div class="flex gap-12">
-            <div class="text-center">
+        <div class="flex gap-12 text-center">
+            <div>
                 <div class="font-headline text-4xl font-bold text-primary">8+</div>
-                <div class="font-label text-xs uppercase tracking-widest text-slate-400">Years Experience</div>
+                <div class="text-xs uppercase tracking-widest text-slate-400">Experience</div>
             </div>
-            <div class="text-center">
+            <div>
                 <div class="font-headline text-4xl font-bold text-primary">4</div>
-                <div class="font-label text-xs uppercase tracking-widest text-slate-400">Publications</div>
+                <div class="text-xs uppercase tracking-widest text-slate-400">Publications</div>
             </div>
         </div>
     </header>
 
-    <section id="education" class="mb-32">
+    <!-- Education Bölümü (Ph.D Büyük, M.Sc Küçük) -->
+    <section class="mb-32">
         <h2 class="font-headline text-3xl font-bold text-primary border-l-4 border-primary pl-6 mb-12">Education</h2>
         <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-            <!-- Ph.D Card (Büyük/Gradyanlı) -->
-            <div class="md:col-span-2 scholar-indigo-gradient p-12 rounded-[2rem] text-white relative overflow-hidden flex flex-col justify-center shadow-xl transition-all hover:scale-[1.01]">
+            <div class="md:col-span-2 scholar-indigo-gradient p-12 rounded-[2.5rem] text-white relative overflow-hidden flex flex-col justify-center shadow-xl">
                 <div class="relative z-10">
-                    <span class="font-label text-xs font-black opacity-60 mb-3 block uppercase tracking-[0.2em]">Doctoral Studies</span>
-                    <h3 class="text-4xl font-bold mb-4 tracking-tight">Ph.D. in Mathematics</h3>
-                    <p class="text-slate-200 font-body leading-relaxed mb-6 text-xl">Istanbul Technical University (ITU)</p>
-                    <p class="text-slate-300 text-sm max-w-xl leading-relaxed">Focus on p-adic valuations, harmonic numbers, and advanced mathematical analysis. Thesis work involves deep inquiry into number theoretic properties of generalized sequences.</p>
+                    <span class="text-xs font-black opacity-50 mb-3 block uppercase tracking-widest">Doctoral Studies</span>
+                    <h3 class="text-4xl font-bold mb-4">Ph.D. in Mathematics</h3>
+                    <p class="text-slate-200 text-xl mb-6">Istanbul Technical University (ITU)</p>
+                    <p class="text-slate-400 text-sm max-w-xl leading-relaxed">Focus on p-adic valuations, harmonic numbers, and mathematical analysis. Thesis work involves deep inquiry into number theoretic properties of generalized sequences.</p>
                 </div>
                 <div class="absolute top-0 right-0 w-80 h-80 bg-white/5 rounded-full blur-3xl -mr-32 -mt-32"></div>
             </div>
 
-            <!-- Master Card (Küçük/Beyaz) -->
-            <div class="bg-white p-10 rounded-[2rem] shadow-sm border border-slate-100 transition-all hover:shadow-lg flex flex-col justify-between">
+            <div class="bg-white p-10 rounded-[2.5rem] shadow-sm border border-slate-100 flex flex-col justify-between transition-all hover:shadow-lg">
                 <div>
-                    <div class="w-12 h-12 bg-slate-50 rounded-xl flex items-center justify-center mb-6">
-                        <span class="material-symbols-outlined text-primary text-2xl">school</span>
-                    </div>
-                    <span class="font-label text-xs font-black text-slate-400 mb-2 block tracking-wider uppercase">Graduate Studies</span>
+                    <span class="text-xs font-black text-slate-300 mb-2 block uppercase tracking-widest">Graduate Studies</span>
                     <h3 class="text-2xl font-bold text-primary mb-2">M.Sc. in Mathematics</h3>
-                    <p class="text-primary font-bold text-sm mb-4">Koç University</p>
+                    <p class="text-primary font-bold text-sm">Koç University</p>
                 </div>
-                <p class="text-xs text-slate-500 leading-relaxed italic border-t border-slate-50 pt-4">Thesis: "The Dedekind Zeta Function and the Analytic Class Number Formula"</p>
+                <p class="text-xs text-slate-400 italic pt-6 border-t border-slate-50">"The Dedekind Zeta Function and the Analytic Class Number Formula"</p>
             </div>
         </div>
     </section>
 
-    <!-- Yayın Önizleme -->
+    <!-- Recent Publications Bölümü -->
     <section class="mb-32">
         <h2 class="font-headline text-3xl font-bold text-primary mb-12">Recent Publications</h2>
-        <div class="space-y-4">
-            <article class="bg-white p-6 rounded-2xl shadow-sm border border-slate-100 hover:shadow-md transition-all flex gap-6 items-center">
-                <span class="text-2xl font-black text-slate-100">01</span>
+        <div class="space-y-6">
+            <article class="bg-white p-8 rounded-2xl shadow-sm border border-slate-100 flex gap-6 items-center group hover:border-primary/20 transition-all">
+                <span class="text-3xl font-black text-slate-100 group-hover:text-primary/10 transition-colors">01</span>
                 <div class="flex-1">
-                    <h3 class="font-bold text-primary text-lg">On the finiteness of some p-divisible sets</h3>
-                    <p class="text-xs text-slate-400 italic">Ankara Series A1 Mathematics (2024)</p>
+                    <h3 class="font-bold text-primary text-xl">On the finiteness of some p-divisible sets</h3>
+                    <p class="text-sm text-slate-500 italic">Ankara Series A1 Mathematics (2024)</p>
                 </div>
                 <a href="publications.html" class="material-symbols-outlined text-slate-300 hover:text-primary transition-colors">arrow_forward</a>
             </article>
-            <div class="text-center mt-8">
-                <a href="publications.html" class="bg-primary text-white px-8 py-3 rounded-xl font-headline font-semibold hover:opacity-90 transition-all">All Publications</a>
+            <div class="text-center mt-12">
+                <a href="publications.html" class="bg-primary text-white px-10 py-4 rounded-xl font-headline font-semibold hover:opacity-90 transition-all shadow-lg inline-block">View All Publications</a>
             </div>
         </div>
     </section>
 
     <!-- Collaborate Bölümü -->
-    <section class="scholar-indigo-gradient rounded-[3rem] p-16 text-center relative overflow-hidden shadow-2xl">
+    <section class="scholar-indigo-gradient rounded-[3rem] p-16 text-center relative overflow-hidden shadow-2xl mb-32">
         <div class="relative z-10 text-white">
             <h2 class="text-4xl md:text-5xl font-bold mb-6 tracking-tight">Let's collaborate on research.</h2>
-            <p class="text-slate-300 max-w-xl mx-auto mb-10 text-lg">Open to research collaborations, PhD supervisions, and academic partnerships.</p>
-            <div class="flex justify-center gap-4">
-                <a href="mailto:caltuntas@itu.edu.tr" class="bg-white text-primary px-10 py-4 rounded-xl font-headline font-semibold hover:scale-105 transition-all shadow-xl">Get in Touch</a>
-            </div>
+            <p class="text-slate-300 max-w-xl mx-auto mb-10 text-lg leading-relaxed">Open to research collaborations, PhD supervisions, and academic partnerships.</p>
+            <a href="mailto:caltuntas@itu.edu.tr" class="bg-white text-primary px-12 py-4 rounded-xl font-headline font-semibold hover:scale-105 transition-all shadow-xl inline-block">Get in Touch</a>
+        </div>
+    </section>
+
+    <!-- EKLEDİĞİMİZ CONTACT & NETWORK BÖLÜMÜ (Tüm Linkler Burada) -->
+    <section id="contact" class="grid grid-cols-1 md:grid-cols-2 gap-12 py-12 border-t border-slate-200">
+        <div>
+            <h2 class="font-headline text-3xl font-bold text-primary mb-4">Contact</h2>
+            <p class="text-secondary mb-6 text-lg">Feel free to reach out for academic inquiries or collaboration proposals.</p>
+            <a href="mailto:caltuntas@itu.edu.tr" class="flex items-center gap-3 text-primary font-bold text-xl hover:underline">
+                <span class="material-symbols-outlined">mail</span>
+                caltuntas@itu.edu.tr
+            </a>
+        </div>
+        <div class="grid grid-cols-2 gap-4">
+            <a href="https://orcid.org/0000-0001-8582-4305" target="_blank" class="p-4 bg-white border border-slate-100 rounded-2xl text-center hover:border-primary transition-all">
+                <div class="text-xs font-black text-slate-300 uppercase tracking-tighter mb-1">ORCID</div>
+                <div class="text-sm font-bold text-primary">Profile</div>
+            </a>
+            <a href="https://scholar.google.com/citations?user=-iULWGcAAAAJ" target="_blank" class="p-4 bg-white border border-slate-100 rounded-2xl text-center hover:border-primary transition-all">
+                <div class="text-xs font-black text-slate-300 uppercase tracking-tighter mb-1">Scholar</div>
+                <div class="text-sm font-bold text-primary">Google</div>
+            </a>
+            <a href="https://www.researchgate.net/profile/Cagatay_Altuntas" target="_blank" class="p-4 bg-white border border-slate-100 rounded-2xl text-center hover:border-primary transition-all">
+                <div class="text-xs font-black text-slate-300 uppercase tracking-tighter mb-1">ResearchGate</div>
+                <div class="text-sm font-bold text-primary">Network</div>
+            </a>
+            <a href="https://www.semanticscholar.org/author/2141423935" target="_blank" class="p-4 bg-white border border-slate-100 rounded-2xl text-center hover:border-primary transition-all">
+                <div class="text-xs font-black text-slate-300 uppercase tracking-tighter mb-1">Semantic</div>
+                <div class="text-sm font-bold text-primary">Scholar</div>
+            </a>
         </div>
     </section>
 </main>
 
-<footer class="bg-primary text-white py-16 opacity-60">
-    <div class="max-w-7xl mx-auto px-8 flex flex-col md:flex-row justify-between items-center text-xs uppercase tracking-widest">
-        <p>© 2026 Çağatay Altuntaş</p>
-        <div class="flex gap-8 my-4 md:my-0">
-            <a href="https://orcid.org/0000-0001-8582-4305" target="_blank">ORCID</a>
-            <a href="https://scholar.google.com/citations?user=-iULWGcAAAAJ" target="_blank">Scholar</a>
-        </div>
+<footer class="bg-primary text-white py-12 mt-12 opacity-40">
+    <div class="max-w-7xl mx-auto px-8 flex flex-col md:flex-row justify-between items-center text-[10px] uppercase tracking-widest">
+        <p>© 2026 Çağatay Altuntaş. All rights reserved.</p>
+        <p>Built with Tailwind & Manim</p>
     </div>
 </footer>
+
 </body>
 </html>
