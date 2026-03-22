@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8"/>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+    <title>Blog | Çağatay Altuntaş</title>
+    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;600;700;800&family=Inter:wght@400;500;600&display=swap" rel="stylesheet"/>
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet"/>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: { "vismo-dark": "#050510", "vismo-card": "#0f0f1f", "vismo-accent": "#3b82f6" },
+            fontFamily: { "headline": ["Manrope"], "body": ["Inter"] }
+          },
+        },
+      }
+    </script>
+</head>
+<body class="bg-vismo-dark font-body text-slate-100 antialiased">
+
+<nav class="fixed top-0 w-full z-50 bg-vismo-dark/80 backdrop-blur-md border-b border-white/5 text-xs font-headline font-semibold uppercase tracking-tight">
+    <div class="flex justify-between items-center px-8 py-4 max-w-7xl mx-auto">
+        <div class="text-white italic tracking-tighter uppercase">Academic Journal</div>
+        <div class="hidden md:flex items-center space-x-8">
+            <a class="text-slate-400 hover:text-white transition-colors" href="index.html">Home</a>
+            <a class="text-white border-b border-vismo-accent pb-1" href="blog.html">Blog</a>
+            <a class="text-slate-400 hover:text-white transition-colors" href="teaching.html">Teaching</a>
+            <a class="text-slate-400 hover:text-white transition-colors" href="useful-links.html">Links</a>
+        </div>
+    </div>
+</nav>
+
+<main class="pt-32 pb-24 px-6 max-w-5xl mx-auto">
+    <header class="mb-16">
+        <h1 class="font-headline text-5xl font-extrabold text-white tracking-tighter mb-4">Academic Blog</h1>
+        <p class="text-slate-400 text-lg leading-relaxed">Thoughts on number theory, teaching mathematics, and academic life.</p>
+    </header>
+
+    <div class="space-y-8">
+        <!-- Blog Post 1 -->
+        <article class="bg-vismo-card p-8 rounded-[2rem] border border-white/5 hover:border-vismo-accent/30 transition-all flex flex-col md:flex-row gap-8 group">
+            <div class="md:w-1/4">
+                <span class="text-xs font-bold text-vismo-accent uppercase tracking-widest block mb-2">March 2026</span>
+                <span class="text-slate-600 text-[10px] uppercase font-bold px-2 py-1 border border-white/10 rounded">Number Theory</span>
+            </div>
+            <div class="flex-1">
+                <h2 class="text-2xl font-bold text-white mb-3 group-hover:text-vismo-accent transition-colors leading-tight">Visualizing P-adic Valuations with Manim</h2>
+                <p class="text-slate-400 text-sm mb-6 leading-relaxed">An exploration of how we can use Python-based animations to teach complex number theory concepts to undergraduate students.</p>
+                <a href="#" class="inline-flex items-center text-xs font-bold uppercase tracking-widest text-white hover:gap-3 transition-all">Read Post <span class="material-symbols-outlined ml-2 text-sm">arrow_right_alt</span></a>
+            </div>
+        </article>
+
+        <!-- Blog Post 2 -->
+        <article class="bg-vismo-card p-8 rounded-[2rem] border border-white/5 hover:border-vismo-accent/30 transition-all flex flex-col md:flex-row gap-8 group opacity-80 hover:opacity-100">
+            <div class="md:w-1/4">
+                <span class="text-xs font-bold text-slate-500 uppercase tracking-widest block mb-2">Feb 2026</span>
+                <span class="text-slate-600 text-[10px] uppercase font-bold px-2 py-1 border border-white/10 rounded">Academia</span>
+            </div>
+            <div class="flex-1">
+                <h2 class="text-2xl font-bold text-white mb-3 group-hover:text-vismo-accent transition-colors leading-tight">Reflections on Harmonic Numbers and Generalizations</h2>
+                <p class="text-slate-400 text-sm mb-6 leading-relaxed">A brief summary of my recent research findings and what they mean for the field of analytic number theory.</p>
+                <a href="#" class="inline-flex items-center text-xs font-bold uppercase tracking-widest text-white hover:gap-3 transition-all">Read Post <span class="material-symbols-outlined ml-2 text-sm">arrow_right_alt</span></a>
+            </div>
+        </article>
+    </div>
+</main>
+</body>
+</html>
