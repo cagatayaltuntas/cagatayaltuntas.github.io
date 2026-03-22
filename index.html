@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class="light">
 <head>
     <meta charset="utf-8"/>
     <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
@@ -11,127 +11,82 @@
       tailwind.config = {
         theme: {
           extend: {
-            colors: { "vismo-dark": "#050510", "vismo-card": "#0f0f1f", "vismo-accent": "#3b82f6" },
+            colors: { "primary": "#000d22", "primary-container": "#0a2342", "background": "#f7f9fc", "secondary": "#4b6173" },
             fontFamily: { "headline": ["Manrope"], "body": ["Inter"] }
           },
         },
       }
     </script>
+    <style> .scholar-indigo-gradient { background: linear-gradient(135deg, #000d22 0%, #0a2342 100%); } </style>
 </head>
-<body class="bg-vismo-dark font-body text-slate-100 antialiased">
+<body class="bg-background font-body text-slate-900 antialiased">
 
-<!-- UNIFIED NAV -->
-<nav class="fixed top-0 w-full z-50 bg-vismo-dark/80 backdrop-blur-md border-b border-white/5">
+<nav class="fixed top-0 w-full z-50 bg-white/80 backdrop-blur-md border-b border-slate-100">
     <div class="flex justify-between items-center px-8 py-4 max-w-7xl mx-auto">
-        <div class="text-xl font-bold text-white tracking-tighter font-headline italic uppercase">Academic Portfolio</div>
+        <div class="text-xl font-bold text-[#0A2342] tracking-tighter font-headline">Academic Portfolio</div>
         <div class="hidden md:flex items-center space-x-8 font-headline font-semibold text-xs uppercase tracking-tight">
-            <a class="text-white border-b-2 border-vismo-accent pb-1" href="index.html">Home</a>
-            <a class="text-slate-400 hover:text-white transition-colors" href="blog.html">Blog</a>
-            <a class="text-slate-400 hover:text-white transition-colors" href="publications.html">Publications</a>
-            <a class="text-slate-400 hover:text-white transition-colors" href="teaching.html">Teaching</a>
-            <a class="text-slate-400 hover:text-white transition-colors" href="useful-links.html">Links</a>
+            <a class="text-[#0A2342] border-b-2 border-[#0A2342]" href="index.html">Home</a>
+            <a class="text-slate-500 hover:text-[#0A2342] transition-colors" href="blog.html">Blog</a>
+            <a class="text-slate-500 hover:text-[#0A2342] transition-colors" href="publications.html">Publications</a>
+            <a class="text-slate-500 hover:text-[#0A2342] transition-colors" href="teaching.html">Teaching</a>
+            <a class="text-slate-500 hover:text-[#0A2342] transition-colors" href="useful-links.html">Links</a>
         </div>
-        <a href="mailto:caltuntas@itu.edu.tr" class="bg-vismo-accent text-white px-6 py-2 rounded-xl font-headline font-semibold hover:opacity-80 transition-opacity">Contact</a>
+        <a href="#contact" class="bg-primary-container text-white px-6 py-2 rounded-xl font-headline font-semibold hover:opacity-80">Contact</a>
     </div>
 </nav>
 
 <main class="pt-32 pb-24 px-6 max-w-7xl mx-auto">
-    <!-- HERO SECTION -->
+    <!-- Hero -->
     <header class="mb-24 flex flex-col md:flex-row md:items-end justify-between gap-8">
-        <div class="max-w-3xl">
-            <span class="text-vismo-accent text-sm font-bold uppercase tracking-[0.3em] mb-4 block">Mathematical Research • Çağatay Altuntaş</span>
-            <h1 class="font-headline text-6xl md:text-8xl font-extrabold text-white tracking-tighter leading-none mb-8">
-                Academic<br><span class="text-transparent bg-clip-text bg-gradient-to-r from-vismo-accent to-blue-400">Excellence</span>
-            </h1>
-            <p class="text-xl text-slate-400 leading-relaxed max-w-2xl">
-                Dedicated research in harmonic numbers, p-adic valuations, and advanced mathematical analysis at Istanbul Technical University.
-            </p>
+        <div class="max-w-2xl">
+            <span class="text-sm uppercase tracking-widest text-slate-500 mb-4 block">Mathematical Research • Çağatay Altuntaş</span>
+            <h1 class="font-headline text-5xl md:text-7xl font-extrabold text-primary tracking-tighter leading-none mb-6">Academic Excellence</h1>
+            <p class="text-lg text-secondary leading-relaxed italic">"Teaching Assistant & Instructor at Istanbul Technical University. Specialized in Calculus and Number Theory."</p>
         </div>
-        <div class="flex gap-12 border-l border-white/10 pl-8">
-            <div class="text-center">
-                <div class="font-headline text-5xl font-bold text-white tracking-tighter">8+</div>
-                <div class="text-[10px] uppercase tracking-widest text-slate-500 font-bold">Years Experience</div>
+        <div class="flex gap-12 text-center">
+            <div>
+                <div class="font-headline text-4xl font-bold text-primary">8+</div>
+                <div class="text-[10px] uppercase font-bold text-slate-400">Experience</div>
             </div>
-            <div class="text-center">
-                <div class="font-headline text-5xl font-bold text-white tracking-tighter">4</div>
-                <div class="text-[10px] uppercase tracking-widest text-slate-500 font-bold">Publications</div>
+            <div>
+                <div class="font-headline text-4xl font-bold text-primary">English</div>
+                <div class="text-[10px] uppercase font-bold text-slate-400">Proficient (YDS: 85)</div>
             </div>
         </div>
     </header>
 
-    <!-- EDUCATION GRID (Unified Dark) -->
-    <section class="mb-32">
-        <h2 class="font-headline text-2xl font-bold text-white mb-12 flex items-center gap-4">
-            <span class="w-12 h-[1px] bg-vismo-accent"></span> Education
-        </h2>
-        <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-            <!-- PhD Card -->
-            <div class="md:col-span-2 bg-gradient-to-br from-vismo-card to-vismo-dark p-12 rounded-[2.5rem] border border-white/5 relative overflow-hidden group hover:border-vismo-accent/50 transition-all">
-                <div class="relative z-10">
-                    <span class="text-xs font-bold text-vismo-accent uppercase tracking-widest mb-4 block">Doctoral Studies</span>
-                    <h3 class="text-4xl font-bold text-white mb-4">Ph.D. in Mathematics</h3>
-                    <p class="text-slate-300 text-xl mb-6">Istanbul Technical University (ITU)</p>
-                    <p class="text-slate-500 text-sm max-w-xl leading-relaxed">Focus on p-adic valuations, harmonic numbers, and mathematical analysis. Research involves deep inquiry into number theoretic properties.</p>
-                </div>
-                <div class="absolute top-0 right-0 w-64 h-64 bg-vismo-accent/10 rounded-full blur-[80px] group-hover:bg-vismo-accent/20 transition-all"></div>
+    <!-- Education & Quick Experience -->
+    <section class="grid grid-cols-1 md:grid-cols-3 gap-8 mb-32">
+        <div class="md:col-span-2 scholar-indigo-gradient p-12 rounded-[2.5rem] text-white relative overflow-hidden shadow-xl">
+            <span class="text-xs font-black opacity-50 mb-3 block uppercase tracking-widest">Current Role</span>
+            <h3 class="text-4xl font-bold mb-4">Instructor @ ITU</h3>
+            <p class="text-slate-200 text-xl mb-6">Mathematics I & II (Calculus I-II)</p>
+            <div class="flex items-center gap-2 text-sm text-slate-300">
+                <span class="material-symbols-outlined text-sm">language</span>
+                All courses taught in English
             </div>
+        </div>
+        <div class="bg-white p-10 rounded-[2.5rem] shadow-sm border border-slate-100">
+            <h3 class="text-xl font-bold text-primary mb-4">Ph.D. Candidate</h3>
+            <p class="text-sm text-slate-500 leading-relaxed mb-6">Istanbul Technical University. Focus on p-adic valuations and harmonic numbers.</p>
+            <a href="teaching.html" class="text-primary font-bold text-xs uppercase hover:underline">Full Curriculum →</a>
+        </div>
+    </section>
 
-            <!-- MSc Card -->
-            <div class="bg-vismo-card p-10 rounded-[2.5rem] border border-white/5 flex flex-col justify-between hover:border-white/10 transition-all">
+    <!-- Recent Pubs -->
+    <section class="mb-32">
+        <h2 class="font-headline text-3xl font-bold text-primary mb-12">Recent Publications</h2>
+        <div class="bg-white p-8 rounded-3xl border border-slate-100 flex items-center justify-between group hover:shadow-lg transition-all">
+            <div class="flex gap-6 items-center">
+                <span class="text-2xl font-black text-slate-100 group-hover:text-primary transition-colors">01</span>
                 <div>
-                    <span class="text-xs font-bold text-slate-500 uppercase tracking-widest mb-4 block">Graduate Studies</span>
-                    <h3 class="text-2xl font-bold text-white mb-2">M.Sc. in Mathematics</h3>
-                    <p class="text-vismo-accent font-bold text-sm">Koç University</p>
+                    <h3 class="font-bold text-primary">On the finiteness of some p-divisible sets</h3>
+                    <p class="text-xs text-slate-400">Ankara Series A1 Mathematics (2024)</p>
                 </div>
-                <p class="text-xs text-slate-500 italic pt-8 leading-relaxed opacity-60">"The Dedekind Zeta Function and the Analytic Class Number Formula"</p>
             </div>
-        </div>
-    </section>
-
-    <!-- RECENT PUB PREVIEW -->
-    <section class="mb-32">
-        <div class="flex justify-between items-end mb-12">
-            <h2 class="font-headline text-2xl font-bold text-white">Recent Publications</h2>
-            <a href="publications.html" class="text-xs font-bold uppercase tracking-widest text-vismo-accent hover:underline">View All</a>
-        </div>
-        <div class="bg-vismo-card rounded-3xl border border-white/5 p-4">
-            <article class="p-6 flex gap-8 items-center border-b border-white/5 last:border-0 group">
-                <span class="text-4xl font-black text-white/5 group-hover:text-vismo-accent transition-colors">01</span>
-                <div class="flex-1">
-                    <h3 class="font-bold text-white text-lg">On the finiteness of some p-divisible sets</h3>
-                    <p class="text-xs text-slate-500 italic">Ankara Series A1 Mathematics (2024)</p>
-                </div>
-                <span class="material-symbols-outlined text-slate-700 group-hover:translate-x-2 transition-transform">arrow_forward</span>
-            </article>
-        </div>
-    </section>
-
-    <!-- UNIFIED CONTACT (Sitenin Her Yerinde En Alta Gelebilir) -->
-    <section id="contact" class="grid grid-cols-1 md:grid-cols-2 gap-16 py-20 border-t border-white/5">
-        <div>
-            <h2 class="font-headline text-4xl font-extrabold text-white mb-6">Let's Connect</h2>
-            <p class="text-slate-400 text-lg mb-10 leading-relaxed">Open to research collaborations, PhD supervisions, and academic partnerships.</p>
-            <a href="mailto:caltuntas@itu.edu.tr" class="text-2xl font-bold text-vismo-accent hover:text-white transition-colors flex items-center gap-4">
-                caltuntas@itu.edu.tr
-                <span class="material-symbols-outlined">north_east</span>
-            </a>
-        </div>
-        <div class="grid grid-cols-2 gap-4">
-            <a href="https://orcid.org/0000-0001-8582-4305" target="_blank" class="p-6 bg-vismo-card border border-white/5 rounded-2xl flex flex-col items-center justify-center group hover:border-vismo-accent transition-all">
-                <span class="text-[10px] font-bold text-slate-500 uppercase tracking-[0.2em] mb-2">ORCID</span>
-                <span class="text-sm font-bold text-white group-hover:text-vismo-accent transition-colors">Researcher Profile</span>
-            </a>
-            <a href="https://scholar.google.com/citations?user=-iULWGcAAAAJ" target="_blank" class="p-6 bg-vismo-card border border-white/5 rounded-2xl flex flex-col items-center justify-center group hover:border-vismo-accent transition-all">
-                <span class="text-[10px] font-bold text-slate-500 uppercase tracking-[0.2em] mb-2">Scholar</span>
-                <span class="text-sm font-bold text-white group-hover:text-vismo-accent transition-colors">Google Profile</span>
-            </a>
+            <a href="publications.html" class="material-symbols-outlined text-slate-300">arrow_forward</a>
         </div>
     </section>
 </main>
-
-<footer class="py-12 text-center text-[10px] font-bold uppercase tracking-[0.3em] text-slate-700 border-t border-white/5">
-    © 2026 Çağatay Altuntaş • Academic Portfolio
-</footer>
-
 </body>
 </html>
