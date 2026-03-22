@@ -1,45 +1,72 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class="light">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Teaching Experience</title>
-    <link rel="stylesheet" href="styles.css">
+    <meta charset="utf-8"/>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+    <title>Teaching | Çağatay Altuntaş</title>
+    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;600;700;800&family=Inter:wght@400;500;600&display=swap" rel="stylesheet"/>
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght@100..700" rel="stylesheet"/>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: { "primary": "#000d22", "primary-container": "#0a2342", "background": "#f7f9fc" },
+                    fontFamily: { "headline": ["Manrope"], "body": ["Inter"] }
+                }
+            }
+        }
+    </script>
 </head>
-<body>
-    <header class="hero">
-        <h1>Teaching Experience</h1>
-        <p>500+ Students Taught | 12 Courses Assisted</p>
-    </header>
-
-    <section class="instruction-philosophy">
-        <h2>Philosophy of Instruction</h2>
-        <p>I believe in creating an inclusive and engaging educational environment...</p>
-    </section>
-
-    <section class="academic-appointments">
-        <h2>Timeline of Academic Appointments</h2>
-        <ul>
-            <li>2025-Present: Instructor at ITU Math Dept</li>
-            <li>2018-Present: Research & Teaching Assistant at ITU</li>
-            <li>2016-2018: Teaching Assistant at Koç University</li>
-        </ul>
-    </section>
-
-    <section class="teaching-highlights">
-        <h2>Teaching Highlights</h2>
-        <div class="card">
-            <h3>Highlight 1</h3>
-            <p>Description of highlight 1...</p>
+<body class="bg-background font-body text-slate-900 antialiased">
+    <nav class="fixed top-0 w-full z-50 bg-white/80 backdrop-blur-md border-b border-slate-100">
+        <div class="flex justify-between items-center px-8 py-4 max-w-7xl mx-auto">
+            <div class="text-xl font-bold text-primary tracking-tighter font-headline">Academic Portfolio</div>
+            <div class="hidden md:flex items-center space-x-8 font-headline font-semibold">
+                <a class="text-slate-500 hover:text-primary transition-colors" href="index.html">Home</a>
+                <a class="text-slate-500 hover:text-primary transition-colors" href="publications.html">Publications</a>
+                <a class="text-primary border-b-2 border-primary" href="teaching.html">Teaching</a>
+                <a class="text-slate-500 hover:text-primary transition-colors" href="useful-links.html">Links</a>
+            </div>
+            <a href="mailto:caltuntas@itu.edu.tr" class="bg-primary-container text-white px-6 py-2 rounded-xl font-headline font-semibold hover:opacity-90">Contact</a>
         </div>
-        <div class="card">
-            <h3>Highlight 2</h3>
-            <p>Description of highlight 2...</p>
+    </nav>
+
+    <main class="pt-32 pb-24 px-6 max-w-5xl mx-auto">
+        <h1 class="font-headline text-5xl font-extrabold text-primary tracking-tighter mb-12">Teaching Experience</h1>
+        
+        <div class="grid gap-12">
+            <section>
+                <h2 class="text-2xl font-bold text-primary mb-6">Academic Appointments</h2>
+                <div class="border-l-2 border-slate-200 ml-4 space-y-8">
+                    <div class="relative pl-8">
+                        <div class="absolute -left-[9px] top-1 w-4 h-4 rounded-full bg-primary"></div>
+                        <h3 class="font-bold">Instructor</h3>
+                        <p class="text-sm text-slate-500">ITU Math Dept | 2025 - Present</p>
+                    </div>
+                    <div class="relative pl-8">
+                        <div class="absolute -left-[9px] top-1 w-4 h-4 rounded-full bg-slate-300"></div>
+                        <h3 class="font-bold">Research & Teaching Assistant</h3>
+                        <p class="text-sm text-slate-500">Istanbul Technical University | 2018 - 2025</p>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Lecture Notes Section (Combined from previous file) -->
+            <section class="bg-primary-container rounded-3xl p-10 text-white">
+                <h2 class="text-2xl font-bold mb-6">Lecture Notes & Resources</h2>
+                <div class="grid gap-4">
+                    <a href="lecture1.pdf" class="flex items-center justify-between p-4 bg-white/10 rounded-xl hover:bg-white/20 transition-all">
+                        <span>Lecture 1: Introduction to Analysis</span>
+                        <span class="material-symbols-outlined">download</span>
+                    </a>
+                    <a href="lecture2.pdf" class="flex items-center justify-between p-4 bg-white/10 rounded-xl hover:bg-white/20 transition-all">
+                        <span>Lecture 2: Advanced Topics</span>
+                        <span class="material-symbols-outlined">download</span>
+                    </a>
+                </div>
+            </section>
         </div>
-        <div class="card">
-            <h3>Highlight 3</h3>
-            <p>Description of highlight 3...</p>
-        </div>
-    </section>
+    </main>
 </body>
 </html>
