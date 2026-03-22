@@ -1,32 +1,59 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class="light">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Useful Links - Çağatay Altuntaş</title>
-    <!-- Bootstrap CSS -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
-    <link rel="stylesheet" href="style.css">
+    <meta charset="utf-8"/>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+    <title>Links | Çağatay Altuntaş</title>
+    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;600;700;800&family=Inter:wght@400;500;600&display=swap" rel="stylesheet"/>
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght@100..700" rel="stylesheet"/>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: { "primary": "#000d22", "primary-container": "#0a2342", "background": "#f7f9fc" },
+                    fontFamily: { "headline": ["Manrope"], "body": ["Inter"] }
+                }
+            }
+        }
+    </script>
 </head>
-<body>
-    <header class="bg-primary text-white text-center py-4">
-        <div class="container">
-            <h1>Useful Links</h1>
-            <p class="lead">Curated resources and helpful links</p>
+<body class="bg-background font-body text-slate-900 antialiased">
+    <nav class="fixed top-0 w-full z-50 bg-white/80 backdrop-blur-md border-b border-slate-100">
+        <div class="flex justify-between items-center px-8 py-4 max-w-7xl mx-auto">
+            <div class="text-xl font-bold text-primary tracking-tighter font-headline">Academic Portfolio</div>
+            <div class="hidden md:flex items-center space-x-8 font-headline font-semibold">
+                <a class="text-slate-500 hover:text-primary transition-colors" href="index.html">Home</a>
+                <a class="text-slate-500 hover:text-primary transition-colors" href="publications.html">Publications</a>
+                <a class="text-slate-500 hover:text-primary transition-colors" href="teaching.html">Teaching</a>
+                <a class="text-primary border-b-2 border-primary" href="useful-links.html">Links</a>
+            </div>
+            <a href="mailto:caltuntas@itu.edu.tr" class="bg-primary-container text-white px-6 py-2 rounded-xl font-headline font-semibold hover:opacity-90">Contact</a>
         </div>
-    </header>
-    <main class="container my-5">
-        <ul class="list-group">
-            <li class="list-group-item"><a href="https://orcid.org/0000-0001-8582-4305" target="_blank">ORCID Profile</a></li>
-            <li class="list-group-item"><a href="https://scholar.google.com/citations?user=-iULWGcAAAAJ" target="_blank">Google Scholar Profile</a></li>
-            <li class="list-group-item"><a href="https://www.semanticscholar.org/author/2141423935" target="_blank">Semantic Scholar Profile</a></li>
-            <li class="list-group-item"><a href="https://www.researchgate.net/profile/Cagatay_Altuntas" target="_blank">ResearchGate Profile</a></li>
-        </ul>
+    </nav>
+
+    <main class="pt-32 pb-24 px-6 max-w-5xl mx-auto text-center">
+        <h1 class="font-headline text-5xl font-extrabold text-primary tracking-tighter mb-4">Useful Links</h1>
+        <p class="text-slate-500 mb-12">Academic profiles and research networks.</p>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+            <a href="https://scholar.google.com/citations?user=-iULWGcAAAAJ" target="_blank" class="p-8 bg-white rounded-3xl border border-slate-100 shadow-sm hover:shadow-xl hover:-translate-y-1 transition-all">
+                <h3 class="text-xl font-bold text-primary mb-2">Google Scholar</h3>
+                <p class="text-sm text-slate-400">Citations and impact metrics</p>
+            </a>
+            <a href="https://orcid.org/0000-0001-8582-4305" target="_blank" class="p-8 bg-white rounded-3xl border border-slate-100 shadow-sm hover:shadow-xl hover:-translate-y-1 transition-all">
+                <h3 class="text-xl font-bold text-primary mb-2">ORCID</h3>
+                <p class="text-sm text-slate-400">Researcher Identification</p>
+            </a>
+            <a href="https://www.researchgate.net/profile/Cagatay_Altuntas" target="_blank" class="p-8 bg-white rounded-3xl border border-slate-100 shadow-sm hover:shadow-xl hover:-translate-y-1 transition-all">
+                <h3 class="text-xl font-bold text-primary mb-2">ResearchGate</h3>
+                <p class="text-sm text-slate-400">Network and pre-prints</p>
+            </a>
+            <a href="https://www.semanticscholar.org/author/2141423935" target="_blank" class="p-8 bg-white rounded-3xl border border-slate-100 shadow-sm hover:shadow-xl hover:-translate-y-1 transition-all">
+                <h3 class="text-xl font-bold text-primary mb-2">Semantic Scholar</h3>
+                <p class="text-sm text-slate-400">AI-powered research discovery</p>
+            </a>
+        </div>
     </main>
-    <footer class="bg-dark text-white text-center py-3">
-        <div class="container">
-            <p>&copy; 2025 Çağatay Altuntaş. All rights reserved.</p>
-        </div>
-    </footer>
 </body>
 </html>
