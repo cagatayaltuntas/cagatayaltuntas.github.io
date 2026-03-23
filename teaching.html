@@ -3,104 +3,187 @@
 <head>
     <meta charset="utf-8"/>
     <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
-    <title>Teaching | Çağatay Altuntaş</title>
+    <title>Teaching & Resources | Çağatay Altuntaş</title>
     <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;600;700;800&family=Inter:wght@400;500;600&display=swap" rel="stylesheet"/>
     <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet"/>
     <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: { "primary": "#000d22", "primary-container": "#0a2342", "background": "#f7f9fc", "secondary": "#4b6173" },
+            fontFamily: { "headline": ["Manrope"], "body": ["Inter"] }
+          },
+        },
+      }
+    </script>
 </head>
-<body class="bg-[#f7f9fc] font-body text-slate-900 antialiased">
+<body class="bg-background font-body text-slate-900 antialiased">
 
+<!-- Navigasyon (Unified) -->
 <nav class="fixed top-0 w-full z-50 bg-white/80 backdrop-blur-md border-b border-slate-100">
     <div class="flex justify-between items-center px-8 py-4 max-w-7xl mx-auto">
-        <div class="text-xl font-bold text-[#0A2342] tracking-tighter font-headline">Academic Portfolio</div>
+        <div class="text-xl font-bold text-[#0A2342] tracking-tighter font-headline uppercase italic text-sm">Teaching & Academic Hub</div>
         <div class="hidden md:flex items-center space-x-8 font-headline font-semibold text-xs uppercase tracking-tight">
-            <a class="text-slate-400 hover:text-[#0A2342]" href="index.html">Home</a>
-            <a class="text-slate-400 hover:text-[#0A2342]" href="blog.html">Blog</a>
-            <a class="text-slate-400 hover:text-[#0A2342]" href="publications.html">Publications</a>
-            <a class="text-[#0A2342] border-b-2 border-[#0A2342]" href="teaching.html">Teaching</a>
-            <a class="text-slate-400 hover:text-[#0A2342]" href="useful-links.html">Links</a>
+            <a class="text-slate-500 hover:text-[#0A2342]" href="index.html">Home</a>
+            <a class="text-slate-500 hover:text-[#0A2342]" href="blog.html">Blog</a>
+            <a class="text-slate-500 hover:text-[#0A2342]" href="publications.html">Publications</a>
+            <a class="text-[#0A2342] border-b-2 border-[#0A2342] pb-1" href="teaching.html">Teaching</a>
+            <a class="text-slate-500 hover:text-[#0A2342]" href="useful-links.html">Links</a>
         </div>
+        <a href="mailto:caltuntas@itu.edu.tr" class="bg-primary-container text-white px-5 py-2 rounded-xl text-xs font-bold hover:opacity-90">Get in Touch</a>
     </div>
 </nav>
 
-<main class="pt-32 pb-24 px-6 max-w-5xl mx-auto">
-    <h1 class="font-headline text-5xl font-extrabold text-[#000d22] tracking-tighter mb-16">Work Experience</h1>
+<main class="pt-32 pb-24 px-6 max-w-6xl mx-auto">
+    
+    <!-- PROBLEM SETS ARCHIVE (Yeni Bölüm) -->
+    <header class="mb-16">
+        <h1 class="font-headline text-5xl font-extrabold text-primary tracking-tighter mb-4">Teaching & Resources</h1>
+        <p class="text-lg text-secondary max-w-2xl">Problem sets, lecture notes, and visualizations for undergraduate mathematics courses at ITU and Koç University.</p>
+    </header>
 
-    <div class="space-y-12">
-        <!-- ITU Instructor -->
-        <section class="bg-white p-10 rounded-3xl shadow-sm border border-slate-100">
-            <div class="flex justify-between items-start mb-6">
-                <div>
-                    <h2 class="text-2xl font-bold text-[#000d22]">Instructor</h2>
-                    <p class="text-[#0a2342] font-semibold">Istanbul Technical University</p>
+    <section class="mb-24">
+        <h2 class="font-headline text-2xl font-bold text-primary mb-8 flex items-center gap-3">
+            <span class="material-symbols-outlined text-primary">folder_open</span>
+            Problem Sets Archive
+        </h2>
+        
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+            <!-- MAT103E Collection -->
+            <div class="bg-white p-8 rounded-3xl border border-slate-100 shadow-sm">
+                <div class="flex items-center gap-3 mb-6">
+                    <span class="p-2 bg-blue-50 text-blue-600 rounded-lg font-bold text-xs">MAT103E</span>
+                    <h3 class="font-bold text-primary">Calculus I</h3>
                 </div>
-                <span class="text-sm font-bold text-slate-400 uppercase tracking-widest">2025 – Present</span>
-            </div>
-            <ul class="list-disc ml-5 text-slate-600 space-y-2 text-sm">
-                <li>MAT104E Mathematics II (Calculus II)</li>
-                <li>MAT103E Mathematics I (Calculus I)</li>
-            </ul>
-        </section>
-
-        <!-- ITU Assistant -->
-        <section class="bg-white p-10 rounded-3xl shadow-sm border border-slate-100">
-            <div class="flex justify-between items-start mb-6">
-                <div>
-                    <h2 class="text-2xl font-bold text-[#000d22]">Research and Teaching Assistant</h2>
-                    <p class="text-[#0a2342] font-semibold">Istanbul Technical University</p>
+                <div class="space-y-4">
+                    <!-- Dosya Linki -->
+                    <div class="flex items-center justify-between p-4 bg-slate-50 rounded-2xl group hover:bg-primary transition-all">
+                        <div class="flex items-center gap-3">
+                            <span class="material-symbols-outlined text-slate-400 group-hover:text-white">description</span>
+                            <span class="text-sm font-semibold text-slate-700 group-hover:text-white">Problem Set 1: Limits & Derivatives</span>
+                        </div>
+                        <a href="materials/MAT103E_ProblemSet_1.pdf" target="_blank" class="text-[10px] font-black uppercase tracking-widest bg-white text-primary px-3 py-1 rounded-md group-hover:bg-vismo-accent shadow-sm">PDF</a>
+                    </div>
+                    <!-- Gelecekte buraya yeni setler eklenebilir -->
+                    <div class="p-4 border border-dashed border-slate-200 rounded-2xl text-center">
+                        <span class="text-[10px] font-bold text-slate-300 uppercase italic">Problem Set 2 coming soon</span>
+                    </div>
                 </div>
-                <span class="text-sm font-bold text-slate-400 uppercase tracking-widest">2018 – 2025</span>
             </div>
-            <ul class="list-disc ml-5 text-slate-600 space-y-2 text-sm grid grid-cols-1 md:grid-cols-2">
-                <li>MAT103E Mathematics I</li>
-                <li>MAT104E Mathematics II</li>
-                <li>MAT185E Math I (Majors)</li>
-                <li>MAT185E Math II (Majors)</li>
-                <li>MAT287E Math III (Multivariable)</li>
-            </ul>
-        </section>
 
-        <!-- Koç University -->
-        <section class="bg-white p-10 rounded-3xl shadow-sm border border-slate-100">
-            <div class="flex justify-between items-start mb-6">
-                <div>
-                    <h2 class="text-2xl font-bold text-[#000d22]">Teaching Assistant</h2>
-                    <p class="text-[#0a2342] font-semibold">Koç University</p>
+            <!-- MAT104E Collection -->
+            <div class="bg-white p-8 rounded-3xl border border-slate-100 shadow-sm opacity-60">
+                <div class="flex items-center gap-3 mb-6">
+                    <span class="p-2 bg-purple-50 text-purple-600 rounded-lg font-bold text-xs">MAT104E</span>
+                    <h3 class="font-bold text-primary">Calculus II</h3>
                 </div>
-                <span class="text-sm font-bold text-slate-400 uppercase tracking-widest">2016 – 2018</span>
-            </div>
-            <ul class="list-disc ml-5 text-slate-600 space-y-2 text-sm">
-                <li>Math 101 Finite Mathematics</li>
-                <li>Math 102 / 106 Calculus</li>
-                <li>Math 203 Multivariable Calculus</li>
-            </ul>
-            <p class="mt-6 text-xs font-bold text-slate-400 italic">* All courses were taught in English.</p>
-        </section>
-
-        <!-- Language Skills -->
-        <section class="bg-[#000d22] p-10 rounded-3xl text-white shadow-xl">
-            <h2 class="text-xl font-bold mb-4 flex items-center gap-2">
-                <span class="material-symbols-outlined">translate</span> Language Skills
-            </h2>
-            <p class="text-slate-300">English: <span class="text-white font-bold text-lg">Proficient</span></p>
-            <p class="text-xs text-slate-400 mt-2">(YDS Score: 85.0, TOEFL IBT: 82)</p>
-        </section>
-    </div>
-
-    <!-- Manim Gallery (Aydınlık Versiyon) -->
-    <h2 class="font-headline text-3xl font-extrabold text-[#000d22] mt-32 mb-12">Visualizations Gallery</h2>
-    <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
-        <div class="bg-white rounded-3xl overflow-hidden border border-slate-100 shadow-sm group">
-            <div class="aspect-video bg-slate-900 flex items-center justify-center text-white/20">
-                <!-- Manim Video Embed Buraya -->
-                <span class="material-symbols-outlined text-4xl">play_circle</span>
-            </div>
-            <div class="p-6">
-                <h3 class="font-bold text-primary mb-2">Cross Product Determinant</h3>
-                <button class="text-xs font-bold text-primary px-4 py-2 border border-slate-200 rounded-lg hover:bg-slate-50 transition-all">View Notes</button>
+                <p class="text-xs text-slate-400 italic text-center py-8">Materials will be uploaded shortly.</p>
             </div>
         </div>
-    </div>
+    </section>
+
+    <!-- MANIM VISUALIZATIONS GALLERY -->
+    <section class="mb-32">
+        <h2 class="font-headline text-2xl font-bold text-primary mb-8 flex items-center gap-3">
+            <span class="material-symbols-outlined text-primary">play_circle</span>
+            Mathematical Visualizations
+        </h2>
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+            <div class="bg-white rounded-[2rem] overflow-hidden border border-slate-100 shadow-sm group hover:border-primary/20 transition-all">
+                <div class="aspect-video bg-slate-900 flex items-center justify-center relative group">
+                    <!-- Video Embed -->
+                    <iframe class="w-full h-full opacity-80 group-hover:opacity-100 transition-opacity" src="https://www.youtube.com/embed/S_N9Z9mS37M" frameborder="0" allowfullscreen></iframe>
+                </div>
+                <div class="p-8">
+                    <div class="flex justify-between items-center mb-4">
+                        <h3 class="font-bold text-primary text-xl">Cross Product Determinant</h3>
+                        <span class="text-[10px] font-black text-slate-300 uppercase tracking-widest">Manim Anim</span>
+                    </div>
+                    <p class="text-sm text-slate-500 leading-relaxed mb-6">Exploring the geometric intuition behind the determinant of a 3x3 matrix in linear algebra.</p>
+                    <div class="flex gap-4">
+                        <a href="#" class="flex-1 text-center bg-slate-50 text-slate-600 text-[10px] font-bold uppercase tracking-widest py-3 rounded-xl hover:bg-slate-100 transition-all">View Script</a>
+                        <a href="#" class="flex-1 text-center bg-primary text-white text-[10px] font-bold uppercase tracking-widest py-3 rounded-xl hover:opacity-90 transition-all">Notes</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- WORK EXPERIENCE (CV Section) -->
+    <section class="pt-16 border-t border-slate-100">
+        <h2 class="font-headline text-3xl font-extrabold text-primary mb-12">Work Experience</h2>
+        
+        <div class="space-y-8">
+            <!-- ITU Instructor -->
+            <div class="bg-white p-10 rounded-[2.5rem] border border-slate-100 shadow-sm">
+                <div class="flex flex-col md:flex-row justify-between md:items-center mb-6 gap-2">
+                    <h3 class="text-2xl font-bold text-primary">Instructor</h3>
+                    <span class="text-xs font-bold text-slate-400 uppercase tracking-[0.2em]">2025 – Present</span>
+                </div>
+                <p class="text-primary font-bold mb-4">Istanbul Technical University (ITU)</p>
+                <ul class="grid grid-cols-1 md:grid-cols-2 gap-y-2 text-sm text-slate-500 list-disc ml-5">
+                    <li>MAT104E Mathematics II (Calculus II)</li>
+                    <li>MAT103E Mathematics I (Calculus I)</li>
+                </ul>
+            </div>
+
+            <!-- ITU Assistant -->
+            <div class="bg-white p-10 rounded-[2.5rem] border border-slate-100 shadow-sm">
+                <div class="flex flex-col md:flex-row justify-between md:items-center mb-6 gap-2">
+                    <h3 class="text-2xl font-bold text-primary">Research and Teaching Assistant</h3>
+                    <span class="text-xs font-bold text-slate-400 uppercase tracking-[0.2em]">2018 – 2025</span>
+                </div>
+                <p class="text-primary font-bold mb-4">Istanbul Technical University (ITU)</p>
+                <ul class="grid grid-cols-1 md:grid-cols-2 gap-y-2 text-sm text-slate-500 list-disc ml-5">
+                    <li>MAT103E Mathematics I (Calculus I)</li>
+                    <li>MAT104E Mathematics II (Calculus II)</li>
+                    <li>MAT185E Mathematics I (for Mathematics majors)</li>
+                    <li>MAT185E Mathematics II (for Mathematics majors)</li>
+                    <li>MAT287E Mathematics III (Multivariable Calculus)</li>
+                </ul>
+            </div>
+
+            <!-- Koç University -->
+            <div class="bg-white p-10 rounded-[2.5rem] border border-slate-100 shadow-sm">
+                <div class="flex flex-col md:flex-row justify-between md:items-center mb-6 gap-2">
+                    <h3 class="text-2xl font-bold text-primary">Teaching Assistant</h3>
+                    <span class="text-xs font-bold text-slate-400 uppercase tracking-[0.2em]">2016 – 2018</span>
+                </div>
+                <p class="text-primary font-bold mb-4">Koç University</p>
+                <ul class="grid grid-cols-1 md:grid-cols-2 gap-y-2 text-sm text-slate-500 list-disc ml-5">
+                    <li>Math 101 Finite Mathematics</li>
+                    <li>Math 102 Calculus</li>
+                    <li>Math 106 Calculus for Engineering Students</li>
+                    <li>Math 203 Multivariable Calculus</li>
+                </ul>
+                <p class="mt-6 text-[10px] font-bold text-slate-400 italic uppercase tracking-widest text-right">* All courses were taught in English.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- LANGUAGE SKILLS (Footer of Main) -->
+    <section class="mt-12 p-10 bg-primary-container rounded-[2.5rem] text-white flex flex-col md:flex-row justify-between items-center gap-6">
+        <div>
+            <h2 class="text-xl font-bold mb-1">Language Proficiency</h2>
+            <p class="text-slate-400 text-sm">Official standardized test scores</p>
+        </div>
+        <div class="flex gap-8">
+            <div class="text-center">
+                <div class="text-2xl font-bold">85.0</div>
+                <div class="text-[10px] uppercase font-bold text-slate-400">YDS Score</div>
+            </div>
+            <div class="text-center border-l border-white/10 pl-8">
+                <div class="text-2xl font-bold">82</div>
+                <div class="text-[10px] uppercase font-bold text-slate-400">TOEFL IBT</div>
+            </div>
+        </div>
+    </section>
 </main>
+
+<footer class="py-12 border-t border-slate-100 opacity-20 text-center text-[10px] uppercase font-bold tracking-[0.3em]">
+    © 2026 Çağatay Altuntaş • Academic Hub
+</footer>
+
 </body>
 </html>
