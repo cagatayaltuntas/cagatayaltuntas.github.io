@@ -25,22 +25,20 @@
     <div class="flex justify-between items-center px-8 py-4 max-w-7xl mx-auto">
         <div class="text-xl font-bold text-[#0A2342] tracking-tighter font-headline uppercase text-sm">Academic Portfolio</div>
         
-        <!-- Masaüstü Linkler -->
         <div class="hidden md:flex items-center space-x-8 font-headline font-semibold text-xs uppercase tracking-tight">
-            <a class="text-slate-500 hover:text-[#0A2342]" href="index.html">Home</a>
-            <a class="text-slate-500 hover:text-[#0A2342]" href="blog.html">Blog</a>
-            <a class="text-slate-500 hover:text-[#0A2342]" href="publications.html">Publications</a>
+            <a class="text-slate-500 hover:text-[#0A2342] transition-colors" href="index.html">Home</a>
+            <a class="text-slate-500 hover:text-[#0A2342] transition-colors" href="blog.html">Blog</a>
+            <a class="text-slate-500 hover:text-[#0A2342] transition-colors" href="publications.html">Publications</a>
             <a class="text-[#0A2342] border-b-2 border-[#0A2342] pb-1" href="teaching.html">Teaching</a>
-            <a class="text-slate-500 hover:text-[#0A2342]" href="useful-links.html">Links</a>
+            <a class="text-slate-500 hover:text-[#0A2342] transition-colors" href="useful-links.html">Links</a>
         </div>
 
-        <!-- Mobil Menü Butonu -->
         <button id="mobile-menu-button" class="md:hidden text-primary focus:outline-none">
             <span class="material-symbols-outlined text-3xl">menu</span>
         </button>
     </div>
 
-    <!-- Mobil Menü İçeriği -->
+    <!-- Mobil Menü -->
     <div id="mobile-menu" class="hidden md:hidden bg-white border-t border-slate-100 px-8 py-6 space-y-4 shadow-xl text-center font-bold">
         <a class="block text-sm text-slate-600" href="index.html">Home</a>
         <a class="block text-sm text-slate-600" href="blog.html">Blog</a>
@@ -52,7 +50,7 @@
 
 <main class="pt-32 pb-24 px-6 max-w-5xl mx-auto">
     
-    <!-- HEADER & CURRENT STATUS -->
+    <!-- HEADER -->
     <header class="mb-12">
         <h1 class="font-headline text-5xl font-extrabold text-[#000d22] tracking-tighter mb-4 uppercase">Teaching Experience</h1>
         <div class="inline-flex items-center gap-2 px-4 py-2 bg-blue-50 border border-blue-100 rounded-full text-blue-700 text-xs font-bold uppercase tracking-wide">
@@ -66,12 +64,11 @@
 
     <!-- WORK EXPERIENCE -->
     <section class="space-y-4 mb-20 text-sm">
-        <!-- ITU Assistant -->
         <div class="bg-white p-6 rounded-2xl border border-slate-100 shadow-sm flex flex-col md:flex-row justify-between gap-4">
             <div class="flex-1">
                 <h3 class="font-bold text-[#000d22] text-lg leading-tight uppercase tracking-tight">Research and Teaching Assistant @ ITU</h3>
                 <p class="text-[10px] text-slate-400 mt-1 uppercase tracking-widest font-bold">2018 – 2025</p>
-                <ul class="mt-3 grid grid-cols-1 md:grid-cols-2 gap-x-6 text-slate-500 list-disc ml-4 font-medium italic">
+                <ul class="mt-4 grid grid-cols-1 md:grid-cols-2 gap-x-6 gap-y-2 text-slate-600 list-disc ml-4 font-semibold">
                     <li>MAT103E / MAT104E (Calculus I-II)</li>
                     <li>MAT185E (Mathematics I for Math Majors)</li>
                     <li>MAT186E (Mathematics II for Math Majors)</li>
@@ -80,12 +77,11 @@
             </div>
         </div>
 
-        <!-- Koç University -->
         <div class="bg-white p-6 rounded-2xl border border-slate-100 shadow-sm flex flex-col md:flex-row justify-between gap-4">
             <div class="flex-1">
                 <h3 class="font-bold text-[#000d22] text-lg leading-tight uppercase tracking-tight">Teaching Assistant @ Koç University</h3>
                 <p class="text-[10px] text-slate-400 mt-1 uppercase tracking-widest font-bold">2016 – 2018</p>
-                <ul class="mt-3 grid grid-cols-1 md:grid-cols-2 gap-x-6 text-slate-500 list-disc ml-4 font-medium italic">
+                <ul class="mt-4 grid grid-cols-1 md:grid-cols-2 gap-x-6 gap-y-2 text-slate-600 list-disc ml-4 font-semibold">
                     <li>Math 101 Finite Mathematics</li>
                     <li>Math 102 Calculus</li>
                     <li>Math 106 Calculus for Engineers</li>
@@ -93,14 +89,14 @@
                 </ul>
             </div>
             <div class="text-right flex items-end">
-                <p class="text-[9px] font-bold text-slate-300 uppercase tracking-widest italic leading-none">* Taught in English</p>
+                <p class="text-[9px] font-bold text-slate-300 uppercase tracking-widest leading-none">* Taught in English</p>
             </div>
         </div>
     </section>
 
     <!-- PROBLEM SETS ARCHIVE -->
     <section class="mb-24">
-        <h2 class="font-headline text-2xl font-bold text-[#000d22] mb-8 flex items-center gap-3 underline decoration-slate-200 underline-offset-8">
+        <h2 class="font-headline text-2xl font-bold text-[#000d22] mb-8 flex items-center gap-3">
             <span class="material-symbols-outlined text-primary">folder_open</span>
             Problem Sets Archive
         </h2>
@@ -112,38 +108,34 @@
                     <h3 class="font-bold text-[#000d22]">Calculus II</h3>
                 </div>
                 
-                <!-- Tüm satır tıklanabilir -->
                 <a href="materials/PolarCoordinates24.03.26.pdf" target="_blank" class="flex items-center justify-between p-4 bg-slate-50 rounded-2xl group hover:bg-[#000d22] transition-all cursor-pointer">
                     <div class="flex items-center gap-3">
                         <span class="material-symbols-outlined text-slate-400 group-hover:text-white transition-colors">description</span>
-                        <span class="text-sm font-semibold text-slate-700 group-hover:text-white italic transition-colors">Polar Coordinates Problem Set</span>
+                        <span class="text-sm font-semibold text-slate-700 group-hover:text-white transition-colors">Polar Coordinates Problem Set</span>
                     </div>
                     <span class="text-[10px] font-black uppercase tracking-widest bg-white text-primary px-3 py-1 rounded shadow-sm group-hover:bg-blue-50 transition-colors">PDF</span>
                 </a>
             </div>
-            
-            <div class="bg-white p-8 rounded-3xl border border-slate-100 shadow-sm opacity-40">
-                <div class="flex items-center gap-3 mb-6">
-                    <span class="p-2 bg-blue-50 text-blue-600 rounded-lg font-bold text-[10px]">MAT103E</span>
-                    <h3 class="font-bold text-[#000d22]">Calculus I</h3>
-                </div>
-                <p class="text-[10px] text-slate-400 italic text-center py-4 uppercase tracking-[0.2em] font-medium">Coming Soon</p>
-            </div>
         </div>
     </section>
 
-    <!-- PROFICIENCY -->
+    <!-- UPDATED PROFICIENCY (No Score for TOEFL) -->
     <section class="p-8 bg-[#000d22] rounded-[2rem] text-white flex flex-col md:flex-row justify-between items-center gap-8 shadow-xl">
         <h2 class="text-lg font-bold flex items-center gap-2">
             <span class="material-symbols-outlined text-sm">language</span> Language Proficiency
         </h2>
         <div class="flex gap-12">
-            <div class="text-center text-white">
-                <div class="text-2xl font-bold">85.0</div>
+            <!-- YDS Section -->
+            <div class="text-center">
+                <div class="text-3xl font-extrabold tracking-tighter">85.0</div>
                 <div class="text-[9px] uppercase font-bold text-slate-500 tracking-widest mt-1">YDS Score</div>
             </div>
-            <div class="text-center border-l border-white/10 pl-12">
-                <div class="text-2xl font-bold text-white">82</div>
+            <!-- TOEFL Section (Clean/Taken) -->
+            <div class="text-center border-l border-white/10 pl-12 flex flex-col items-center">
+                <div class="flex items-center gap-2">
+                    <span class="material-symbols-outlined text-blue-400 font-bold">verified</span>
+                    <span class="text-xl font-bold tracking-tight">Taken</span>
+                </div>
                 <div class="text-[9px] uppercase font-bold text-slate-500 tracking-widest mt-1">TOEFL IBT</div>
             </div>
         </div>
