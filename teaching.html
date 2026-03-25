@@ -25,7 +25,6 @@
     <div class="flex justify-between items-center px-8 py-4 max-w-7xl mx-auto">
         <div class="text-xl font-bold text-[#0A2342] tracking-tighter font-headline uppercase text-sm">Academic Portfolio</div>
         
-        <!-- Masaüstü Linkler -->
         <div class="hidden md:flex items-center space-x-8 font-headline font-semibold text-xs uppercase tracking-tight">
             <a class="text-slate-500 hover:text-[#0A2342]" href="index.html">Home</a>
             <a class="text-slate-500 hover:text-[#0A2342]" href="blog.html">Blog</a>
@@ -34,13 +33,11 @@
             <a class="text-slate-500 hover:text-[#0A2342]" href="useful-links.html">Links</a>
         </div>
 
-        <!-- Mobil Menü Butonu -->
         <button id="mobile-menu-button" class="md:hidden text-primary focus:outline-none">
             <span class="material-symbols-outlined text-3xl">menu</span>
         </button>
     </div>
 
-    <!-- Mobil Menü İçeriği -->
     <div id="mobile-menu" class="hidden md:hidden bg-white border-t border-slate-100 px-8 py-6 space-y-4 shadow-xl text-center font-bold">
         <a class="block text-sm text-slate-600" href="index.html">Home</a>
         <a class="block text-sm text-slate-600" href="blog.html">Blog</a>
@@ -52,7 +49,6 @@
 
 <main class="pt-32 pb-24 px-6 max-w-5xl mx-auto">
     
-    <!-- HEADER & CURRENT STATUS -->
     <header class="mb-12">
         <h1 class="font-headline text-5xl font-extrabold text-[#000d22] tracking-tighter mb-4">Teaching Experience</h1>
         <div class="inline-flex items-center gap-2 px-4 py-2 bg-blue-50 border border-blue-100 rounded-full text-blue-700 text-xs font-bold uppercase tracking-wide">
@@ -64,9 +60,7 @@
         </div>
     </header>
 
-    <!-- WORK EXPERIENCE (Kompakt Kartlar) -->
     <section class="space-y-4 mb-20 text-sm">
-        <!-- ITU Assistant -->
         <div class="bg-white p-6 rounded-2xl border border-slate-100 shadow-sm flex flex-col md:flex-row justify-between gap-4">
             <div class="flex-1">
                 <h3 class="font-bold text-[#000d22] text-lg leading-tight uppercase">Research and Teaching Assistant @ ITU</h3>
@@ -79,7 +73,6 @@
             </div>
         </div>
 
-        <!-- Koç University -->
         <div class="bg-white p-6 rounded-2xl border border-slate-100 shadow-sm flex flex-col md:flex-row justify-between gap-4">
             <div class="flex-1">
                 <h3 class="font-bold text-[#000d22] text-lg leading-tight uppercase">Teaching Assistant @ Koç University</h3>
@@ -96,7 +89,7 @@
         </div>
     </section>
 
-    <!-- PROBLEM SETS ARCHIVE -->
+    <!-- PROBLEM SETS ARCHIVE (TÜM SATIR TIKLANABİLİR YAPILDI) -->
     <section class="mb-24">
         <h2 class="font-headline text-2xl font-bold text-[#000d22] mb-8 flex items-center gap-3">
             <span class="material-symbols-outlined text-primary">folder_open</span>
@@ -109,13 +102,15 @@
                     <span class="p-2 bg-purple-50 text-purple-600 rounded-lg font-bold text-[10px]">MAT104E</span>
                     <h3 class="font-bold text-[#000d22]">Calculus II</h3>
                 </div>
-                <div class="flex items-center justify-between p-4 bg-slate-50 rounded-2xl group hover:bg-[#000d22] transition-all">
+                
+                <!-- BURASI GÜNCELLENDİ: href ve target artık en dıştaki etikette -->
+                <a href="materials/PolarCoordinates24.03.26.pdf" target="_blank" class="flex items-center justify-between p-4 bg-slate-50 rounded-2xl group hover:bg-[#000d22] transition-all cursor-pointer">
                     <div class="flex items-center gap-3">
-                        <span class="material-symbols-outlined text-slate-400 group-hover:text-white">description</span>
-                        <span class="text-sm font-semibold text-slate-700 group-hover:text-white italic">Polar Coordinates Problem Set</span>
+                        <span class="material-symbols-outlined text-slate-400 group-hover:text-white transition-colors">description</span>
+                        <span class="text-sm font-semibold text-slate-700 group-hover:text-white italic transition-colors">Polar Coordinates Problem Set</span>
                     </div>
-                    <a href="materials/PolarCoordinates24.03.26.pdf" target="_blank" class="text-[10px] font-black uppercase tracking-widest bg-white text-primary px-3 py-1 rounded shadow-sm">PDF</a>
-                </div>
+                    <span class="text-[10px] font-black uppercase tracking-widest bg-white text-primary px-3 py-1 rounded shadow-sm group-hover:bg-blue-50 transition-colors">PDF</span>
+                </a>
             </div>
             
             <div class="bg-white p-8 rounded-3xl border border-slate-100 shadow-sm opacity-40">
@@ -128,7 +123,6 @@
         </div>
     </section>
 
-    <!-- PROFICIENCY -->
     <section class="p-8 bg-[#000d22] rounded-[2rem] text-white flex flex-col md:flex-row justify-between items-center gap-8 shadow-xl">
         <h2 class="text-lg font-bold flex items-center gap-2">
             <span class="material-symbols-outlined text-sm">language</span> Language Proficiency
@@ -151,7 +145,6 @@
 </footer>
 
 <script>
-    // Mobil Menü Mantığı
     const btn = document.getElementById('mobile-menu-button');
     const menu = document.getElementById('mobile-menu');
     btn.addEventListener('click', () => {
