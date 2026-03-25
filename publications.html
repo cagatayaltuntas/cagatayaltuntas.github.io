@@ -1,44 +1,127 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+    <meta charset="utf-8"/>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
     <title>Publications | Çağatay Altuntaş</title>
     <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;600;700;800&family=Inter:wght@400;500;600&display=swap" rel="stylesheet"/>
     <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet"/>
     <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: { "primary": "#000d22", "primary-container": "#0a2342", "background": "#f7f9fc", "secondary": "#4b6173" },
+            fontFamily: { "headline": ["Manrope"], "body": ["Inter"] }
+          },
+        },
+      }
+    </script>
 </head>
 <body class="bg-[#f7f9fc] font-body text-slate-900 antialiased">
+
+<!-- MOBİL UYUMLU NAVİGASYON (İtalik Kaldırıldı) -->
 <nav class="fixed top-0 w-full z-50 bg-white/90 backdrop-blur-md border-b border-slate-100">
     <div class="flex justify-between items-center px-8 py-4 max-w-7xl mx-auto">
-        <div class="text-xl font-bold text-[#0A2342] tracking-tighter font-headline uppercase italic text-xs">Publications</div>
-        <div class="hidden md:flex items-center space-x-8 font-headline font-semibold text-[10px] uppercase tracking-widest">
-            <a class="text-slate-400 hover:text-[#0A2342]" href="index.html">Home</a>
-            <a class="text-slate-400 hover:text-[#0A2342]" href="blog.html">Blog</a>
-            <a class="text-[#0A2342] border-b border-[#0A2342] pb-1" href="publications.html">Publications</a>
-            <a class="text-slate-400 hover:text-[#0A2342]" href="teaching.html">Teaching</a>
-            <a class="text-slate-400 hover:text-[#0A2342]" href="useful-links.html">Links</a>
+        <div class="text-xl font-bold text-[#0A2342] tracking-tighter font-headline uppercase text-sm">Academic Portfolio</div>
+        <div class="hidden md:flex items-center space-x-8 font-headline font-semibold text-xs uppercase tracking-tight">
+            <a class="text-slate-500 hover:text-[#0A2342]" href="index.html">Home</a>
+            <a class="text-slate-500 hover:text-[#0A2342]" href="blog.html">Blog</a>
+            <a class="text-[#0A2342] border-b-2 border-[#0A2342] pb-1" href="publications.html">Publications</a>
+            <a class="text-slate-500 hover:text-[#0A2342]" href="teaching.html">Teaching</a>
+            <a class="text-slate-500 hover:text-[#0A2342]" href="useful-links.html">Links</a>
         </div>
-        <button id="mobile-menu-button" class="md:hidden text-primary"><span class="material-symbols-outlined">menu</span></button>
+        <button id="mobile-menu-button" class="md:hidden text-primary focus:outline-none">
+            <span class="material-symbols-outlined text-3xl">menu</span>
+        </button>
     </div>
-    <div id="mobile-menu" class="hidden md:hidden bg-white px-8 py-6 space-y-4 text-center border-t border-slate-100"><a class="block text-sm font-bold" href="index.html">Home</a><a class="block text-sm font-bold" href="blog.html">Blog</a><a class="block text-sm font-bold" href="publications.html">Publications</a><a class="block text-sm font-bold" href="teaching.html">Teaching</a><a class="block text-sm font-bold" href="useful-links.html">Links</a></div>
+    <!-- Mobil Menü -->
+    <div id="mobile-menu" class="hidden md:hidden bg-white border-t border-slate-100 px-8 py-6 space-y-4 shadow-xl text-center">
+        <a class="block text-sm font-bold text-slate-600" href="index.html">Home</a>
+        <a class="block text-sm font-bold text-slate-600" href="blog.html">Blog</a>
+        <a class="block text-sm font-bold text-slate-600" href="publications.html">Publications</a>
+        <a class="block text-sm font-bold text-slate-600" href="teaching.html">Teaching</a>
+        <a class="block text-sm font-bold text-slate-600" href="useful-links.html">Links</a>
+    </div>
 </nav>
 
 <main class="pt-32 pb-24 px-6 max-w-5xl mx-auto">
-    <header class="mb-16"><h1 class="font-headline text-5xl font-extrabold text-[#000d22] tracking-tighter mb-4 italic">Publications</h1></header>
+    <header class="mb-16">
+        <h1 class="font-headline text-5xl font-extrabold text-[#000d22] tracking-tighter mb-4">Publications</h1>
+        <p class="text-lg text-slate-500 max-w-2xl">Peer-reviewed journal articles and research contributions in Number Theory and Mathematical Analysis.</p>
+    </header>
+
     <div class="space-y-6">
-        <article class="bg-white p-8 rounded-3xl border border-slate-100 hover:shadow-lg transition-all">
-            <span class="text-[10px] font-bold text-slate-400 uppercase tracking-widest block mb-2">2024 • Ankara Series A1</span>
-            <h3 class="text-xl font-bold text-[#000d22] mb-3">On the finiteness of some p-divisible sets</h3>
-            <p class="text-slate-600 mb-4 italic text-sm">Communications Faculty of Sciences University of Ankara Series A1 Mathematics and Statistics, 73.4 (2024): 1011-1039.</p>
-            <a href="https://doi.org/10.31801/cfsuasmas.1441894" target="_blank" class="text-[#000d22] font-black text-[10px] uppercase tracking-widest hover:underline">View DOI →</a>
+        <!-- Publication [4] - 2024 -->
+        <article class="bg-white p-8 rounded-3xl border border-slate-100 shadow-sm hover:border-primary/20 transition-all group">
+            <div class="flex justify-between items-start mb-4">
+                <span class="text-[10px] font-black text-slate-400 uppercase tracking-[0.2em]">2024 • Article [4]</span>
+                <span class="material-symbols-outlined text-slate-200 group-hover:text-primary transition-colors">description</span>
+            </div>
+            <h3 class="text-xl font-bold text-[#000d22] mb-3 leading-tight">On the finiteness of some p-divisible sets</h3>
+            <p class="text-slate-600 mb-6 text-sm leading-relaxed">
+                <strong>Altuntaş, Çağatay.</strong> <em>Communications Faculty of Sciences University of Ankara Series A1 Mathematics and Statistics</em>, 73.4 (2024): 1011-1039.
+            </p>
+            <a href="https://doi.org/10.31801/cfsuasmas.1441894" target="_blank" class="inline-flex items-center gap-2 text-[10px] font-black uppercase tracking-widest bg-slate-50 text-primary px-4 py-2 rounded-lg hover:bg-primary hover:text-white transition-all">
+                View DOI <span class="material-symbols-outlined text-xs">north_east</span>
+            </a>
         </article>
-        <!-- Diğer makaleleri buraya aynı formatta ekleyebilirsin -->
+
+        <!-- Publication [3] - 2023 -->
+        <article class="bg-white p-8 rounded-3xl border border-slate-100 shadow-sm hover:border-primary/20 transition-all group">
+            <div class="flex justify-between items-start mb-4">
+                <span class="text-[10px] font-black text-slate-400 uppercase tracking-[0.2em]">2023 • Article [3]</span>
+            </div>
+            <h3 class="text-xl font-bold text-[#000d22] mb-3 leading-tight">On the p-adic valuation of generalized harmonic numbers</h3>
+            <p class="text-slate-600 mb-6 text-sm leading-relaxed">
+                <strong>Altuntaş, Çağatay.</strong> <em>Bulletin of the Korean Mathematical Society</em>, 60.4 (2023): 933-955.
+            </p>
+            <a href="https://doi.org/10.4134/BKMS.b220399" target="_blank" class="inline-flex items-center gap-2 text-[10px] font-black uppercase tracking-widest bg-slate-50 text-primary px-4 py-2 rounded-lg hover:bg-primary hover:text-white transition-all">
+                View DOI <span class="material-symbols-outlined text-xs">north_east</span>
+            </a>
+        </article>
+
+        <!-- Publication [2] - 2022 -->
+        <article class="bg-white p-8 rounded-3xl border border-slate-100 shadow-sm hover:border-primary/20 transition-all group">
+            <div class="flex justify-between items-start mb-4">
+                <span class="text-[10px] font-black text-slate-400 uppercase tracking-[0.2em]">2022 • Article [2]</span>
+            </div>
+            <h3 class="text-xl font-bold text-[#000d22] mb-3 leading-tight">The difference of hyperharmonic numbers via geometric and analytic methods</h3>
+            <p class="text-slate-600 mb-6 text-sm leading-relaxed">
+                <strong>Altuntaş, Çağatay</strong>, Haydar Göral, and Doğa Can Sertbaş. <em>Journal of the Korean Mathematical Society</em>, 59.6 (2022): 1103-1137.
+            </p>
+            <a href="https://doi.org/10.4134/JKMS.j220087" target="_blank" class="inline-flex items-center gap-2 text-[10px] font-black uppercase tracking-widest bg-slate-50 text-primary px-4 py-2 rounded-lg hover:bg-primary hover:text-white transition-all">
+                View DOI <span class="material-symbols-outlined text-xs">north_east</span>
+            </a>
+        </article>
+
+        <!-- Publication [1] - 2021 -->
+        <article class="bg-white p-8 rounded-3xl border border-slate-100 shadow-sm hover:border-primary/20 transition-all group border-b-4 border-b-blue-50">
+            <div class="flex justify-between items-start mb-4">
+                <span class="text-[10px] font-black text-slate-400 uppercase tracking-[0.2em]">2021 • Article [1]</span>
+            </div>
+            <h3 class="text-xl font-bold text-[#000d22] mb-3 leading-tight">Dedekind harmonic numbers</h3>
+            <p class="text-slate-600 mb-6 text-sm leading-relaxed">
+                <strong>Altuntaş, Çağatay</strong>, and Haydar Göral. <em>Proceedings of the Indian Academy of Sciences: Mathematical Sciences</em>, 131.2 (2021): 46.
+            </p>
+            <a href="https://doi.org/10.1007/s12044-021-00638-3" target="_blank" class="inline-flex items-center gap-2 text-[10px] font-black uppercase tracking-widest bg-slate-50 text-primary px-4 py-2 rounded-lg hover:bg-primary hover:text-white transition-all">
+                View DOI <span class="material-symbols-outlined text-xs">north_east</span>
+            </a>
+        </article>
     </div>
 </main>
+
+<footer class="py-12 border-t border-slate-100 opacity-20 text-center text-[10px] uppercase font-bold tracking-[0.4em]">
+    © 2026 Çağatay Altuntaş • Academic Portfolio
+</footer>
+
 <script>
+    // Mobil menü açma/kapama
     const btn = document.getElementById('mobile-menu-button');
     const menu = document.getElementById('mobile-menu');
-    btn.addEventListener('click', () => menu.classList.toggle('hidden'));
+    btn.addEventListener('click', () => {
+        menu.classList.toggle('hidden');
+    });
 </script>
 </body>
 </html>
