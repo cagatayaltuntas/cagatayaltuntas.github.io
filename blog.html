@@ -36,25 +36,19 @@
 <!-- MOBİL UYUMLU NAVİGASYON -->
 <nav class="fixed top-0 w-full z-50 bg-white/90 backdrop-blur-md border-b border-slate-100">
     <div class="flex justify-between items-center px-8 py-4 max-w-7xl mx-auto">
-        <div class="text-xl font-bold text-[#0A2342] tracking-tighter font-headline uppercase text-sm">Academic Portfolio</div>
-        
-        <!-- Masaüstü Linkler -->
+        <a href="index.html" class="text-xl font-bold text-[#0A2342] tracking-tighter font-headline hover:opacity-80 transition-opacity whitespace-nowrap">Çağatay Altuntaş - Academic Portfolio</a>
         <div class="hidden md:flex items-center space-x-8 font-headline font-semibold text-xs uppercase tracking-tight">
             <a class="text-slate-500 hover:text-[#0A2342] transition-colors" href="index.html">Home</a>
-            <!-- Blog Aktif -->
             <a class="text-[#0A2342] border-b-2 border-[#0A2342] pb-1" href="blog.html">Blog</a>
             <a class="text-slate-500 hover:text-[#0A2342] transition-colors" href="publications.html">Publications</a>
             <a class="text-slate-500 hover:text-[#0A2342] transition-colors" href="teaching.html">Teaching</a>
             <a class="text-slate-500 hover:text-[#0A2342] transition-colors" href="useful-links.html">Links</a>
         </div>
-
-        <!-- Mobil Menü Butonu -->
-        <button id="mobile-menu-button" class="md:hidden text-primary">
-            <span class="material-symbols-outlined text-3xl">menu</span>
-        </button>
+        <div class="flex items-center gap-4">
+            <button id="mobile-menu-button" class="md:hidden text-primary focus:outline-none"><span class="material-symbols-outlined text-3xl">menu</span></button>
+            <a href="index.html#contact" class="hidden md:block bg-[#0a2342] text-white px-6 py-2 rounded-xl text-xs font-bold hover:opacity-80 transition-opacity">Contact</a>
+        </div>
     </div>
-
-    <!-- Mobil Menü -->
     <div id="mobile-menu" class="hidden md:hidden bg-white border-t border-slate-100 px-8 py-6 space-y-4 shadow-xl text-center font-bold">
         <a class="block text-sm text-slate-600" href="index.html">Home</a>
         <a class="block text-sm text-[#0A2342]" href="blog.html">Blog</a>
