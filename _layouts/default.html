@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en" class="light">
+
+<head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>{{ page.title | default: site.title }}</title>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;600;700;800&family=Inter:wght@400;500;600&display=swap"
+        rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap"
+        rel="stylesheet" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: { extend: { colors: { "primary": "#000d22", "primary-container": "#0a2342", "background": "#f7f9fc", "secondary": "#4b6173" }, fontFamily: { "headline": ["Manrope"], "body": ["Inter"] } } }
+        }
+    </script>
+    <style>
+        .scholar-indigo-gradient {
+            background: linear-gradient(135deg, #000d22 0%, #0a2342 100%);
+        }
+    </style>
+</head>
+
+<body class="bg-background font-body text-slate-900 antialiased">
+    <!-- MOBİL UYUMLU NAVİGASYON -->
+    <nav class="fixed top-0 w-full z-50 bg-white/90 backdrop-blur-md border-b border-slate-100">
+        <div class="flex justify-between items-center px-8 py-4 max-w-7xl mx-auto">
+            <a href="{{ '/' | relative_url }}" class="text-xl font-bold text-[#0A2342] tracking-tighter font-headline hover:opacity-80 transition-opacity whitespace-nowrap">Çağatay Altuntaş - Academic Portfolio</a>
+            <div class="hidden md:flex items-center space-x-8 font-headline font-semibold text-xs uppercase tracking-tight">
+                <a class="text-{% if page.url == '/' or page.url == '/index.html' %}#0A2342 border-b-2 border-[#0A2342]{% else %}slate-500 hover:text-[#0A2342] transition-colors{% endif %} pb-1" href="{{ '/' | relative_url }}">Home</a>
+                <a class="text-{% if page.url contains '/blog' %}#0A2342 border-b-2 border-[#0A2342]{% else %}slate-500 hover:text-[#0A2342] transition-colors{% endif %} pb-1" href="{{ '/blog.html' | relative_url }}">Blog</a>
+                <a class="text-{% if page.url contains '/publications' %}#0A2342 border-b-2 border-[#0A2342]{% else %}slate-500 hover:text-[#0A2342] transition-colors{% endif %} pb-1" href="{{ '/publications.html' | relative_url }}">Publications</a>
+                <a class="text-{% if page.url contains '/teaching' %}#0A2342 border-b-2 border-[#0A2342]{% else %}slate-500 hover:text-[#0A2342] transition-colors{% endif %} pb-1" href="{{ '/teaching.html' | relative_url }}">Teaching</a>
+                <a class="text-{% if page.url contains '/useful-links' %}#0A2342 border-b-2 border-[#0A2342]{% else %}slate-500 hover:text-[#0A2342] transition-colors{% endif %} pb-1" href="{{ '/useful-links.html' | relative_url }}">Links</a>
+            </div>
+            <div class="flex items-center gap-4">
+                <button id="mobile-menu-button" class="md:hidden text-primary focus:outline-none"><span class="material-symbols-outlined text-3xl">menu</span></button>
+                <a href="{{ '/' | relative_url }}#contact" class="hidden md:block bg-[#0a2342] text-white px-6 py-2 rounded-xl text-xs font-bold hover:opacity-80 transition-opacity">Contact</a>
+            </div>
+        </div>
+        <!-- MOBİL MENÜ -->
+        <div id="mobile-menu"
+            class="hidden md:hidden bg-white border-t border-slate-100 px-8 py-6 space-y-4 shadow-xl text-center">
+            <a class="block text-sm font-bold text-slate-600" href="{{ '/' | relative_url }}">Home</a>
+            <a class="block text-sm font-bold text-slate-600" href="{{ '/blog.html' | relative_url }}">Blog</a>
+            <a class="block text-sm font-bold text-slate-600" href="{{ '/publications.html' | relative_url }}">Publications</a>
+            <a class="block text-sm font-bold text-slate-600" href="{{ '/teaching.html' | relative_url }}">Teaching</a>
+            <a class="block text-sm font-bold text-slate-600" href="{{ '/useful-links.html' | relative_url }}">Links</a>
+        </div>
+    </nav>
+
+    <main class="pt-32 pb-24 px-6 max-w-7xl mx-auto">
+        {{ content }}
+    </main>
+
+    <footer
+        class="py-10 border-t border-slate-100 opacity-20 text-center text-[9px] uppercase font-bold tracking-[0.4em]">
+        © {{ site.time | date: "%Y" }} Çağatay Altuntaş
+    </footer>
+
+    <script>
+        const btn = document.getElementById('mobile-menu-button');
+        const menu = document.getElementById('mobile-menu');
+        if(btn && menu) {
+            btn.addEventListener('click', () => menu.classList.toggle('hidden'));
+        }
+    </script>
+</body>
+
+</html>

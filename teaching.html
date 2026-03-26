@@ -1,52 +1,9 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="utf-8"/>
-    <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
-    <title>Teaching | Çağatay Altuntaş</title>
-    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;600;700;800&family=Inter:wght@400;500;600&display=swap" rel="stylesheet"/>
-    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet"/>
-    <script src="https://cdn.tailwindcss.com"></script>
-    <script>
-      tailwind.config = {
-        theme: {
-          extend: {
-            colors: { "primary": "#000d22", "primary-container": "#0a2342", "background": "#f7f9fc", "secondary": "#4b6173" },
-            fontFamily: { "headline": ["Manrope"], "body": ["Inter"] }
-          },
-        },
-      }
-    </script>
-</head>
-<body class="bg-[#f7f9fc] font-body text-slate-900 antialiased">
+---
+layout: default
+title: Teaching
+---
 
-<!-- MOBİL UYUMLU NAVİGASYON -->
-<nav class="fixed top-0 w-full z-50 bg-white/90 backdrop-blur-md border-b border-slate-100">
-    <div class="flex justify-between items-center px-8 py-4 max-w-7xl mx-auto">
-        <a href="index.html" class="text-xl font-bold text-[#0A2342] tracking-tighter font-headline hover:opacity-80 transition-opacity whitespace-nowrap">Çağatay Altuntaş - Academic Portfolio</a>
-        <div class="hidden md:flex items-center space-x-8 font-headline font-semibold text-xs uppercase tracking-tight">
-            <a class="text-slate-500 hover:text-[#0A2342] transition-colors" href="index.html">Home</a>
-            <a class="text-slate-500 hover:text-[#0A2342] transition-colors" href="blog.html">Blog</a>
-            <a class="text-slate-500 hover:text-[#0A2342] transition-colors" href="publications.html">Publications</a>
-            <a class="text-[#0A2342] border-b-2 border-[#0A2342] pb-1" href="teaching.html">Teaching</a>
-            <a class="text-slate-500 hover:text-[#0A2342] transition-colors" href="useful-links.html">Links</a>
-        </div>
-        <div class="flex items-center gap-4">
-            <button id="mobile-menu-button" class="md:hidden text-primary focus:outline-none"><span class="material-symbols-outlined text-3xl">menu</span></button>
-            <a href="index.html#contact" class="hidden md:block bg-[#0a2342] text-white px-6 py-2 rounded-xl text-xs font-bold hover:opacity-80 transition-opacity">Contact</a>
-        </div>
-    </div>
-    <div id="mobile-menu" class="hidden md:hidden bg-white border-t border-slate-100 px-8 py-6 space-y-4 shadow-xl text-center font-bold">
-        <a class="block text-sm text-slate-600" href="index.html">Home</a>
-        <a class="block text-sm text-slate-600" href="blog.html">Blog</a>
-        <a class="block text-sm text-slate-600" href="publications.html">Publications</a>
-        <a class="block text-sm text-[#0A2342]" href="teaching.html">Teaching</a>
-        <a class="block text-sm text-slate-600" href="useful-links.html">Links</a>
-    </div>
-</nav>
-
-<main class="pt-32 pb-24 px-6 max-w-5xl mx-auto">
-    <header class="mb-12">
+<header class="mb-12">
         <h1 class="font-headline text-5xl font-extrabold text-[#000d22] tracking-tighter mb-4 uppercase">Teaching Experience</h1>
         <div class="inline-flex items-center gap-2 px-4 py-2 bg-blue-50 border border-blue-100 rounded-full text-blue-700 text-xs font-bold uppercase tracking-wide">
             <span class="relative flex h-2 w-2">
@@ -193,14 +150,3 @@
             </div>
         </div>
     </section>
-</main>
-
-<footer class="py-12 border-t border-slate-100 opacity-20 text-center text-[10px] uppercase font-bold tracking-[0.4em]">© 2026 Çağatay Altuntaş</footer>
-
-<script>
-    const btn = document.getElementById('mobile-menu-button');
-    const menu = document.getElementById('mobile-menu');
-    btn.addEventListener('click', () => { menu.classList.toggle('hidden'); });
-</script>
-</body>
-</html>
