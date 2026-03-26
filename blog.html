@@ -14,44 +14,26 @@ title: Blog
     <!-- Blog Yazıları Listesi -->
     <div class="space-y-16">
         
-        <!-- Blog Post 1 -->
-        <article class="group relative flex flex-col gap-4">
-            <div class="flex items-center gap-4 text-xs font-bold uppercase tracking-[0.2em] text-vismo-accent">
-                <span>March 2026</span>
+        {% for post in site.posts %}
+        <!-- Blog Post -->
+        <article class="group relative flex flex-col gap-4 {% unless forloop.first %}pt-16 border-t border-slate-100{% endunless %}">
+            <div class="flex items-center gap-4 text-xs font-bold uppercase tracking-[0.2em] text-[#000d22]">
+                <span>{{ post.date | date: "%B %Y" }}</span>
                 <span class="w-8 h-[1px] bg-slate-200"></span>
-                <span class="text-slate-400">Number Theory</span>
+                <span class="text-slate-400">{{ post.categories | join: ", " }}</span>
             </div>
             <div class="space-y-4">
-                <h2 class="text-3xl md:text-4xl font-extrabold text-[#000d22] group-hover:text-vismo-accent transition-colors leading-tight">
-                    Visualizing P-adic Valuations with Manim
+                <h2 class="text-3xl md:text-4xl font-extrabold text-[#000d22] group-hover:opacity-80 transition-colors leading-tight">
+                    <a href="{{ post.url | relative_url }}">{{ post.title }}</a>
                 </h2>
-                <p class="text-lg text-slate-600 leading-relaxed font-medium">
-                    An exploration of how we can use Python-based animations to teach complex number theory concepts to undergraduate students.
-                </p>
-                <a href="#" class="inline-flex items-center gap-2 text-sm font-black uppercase tracking-widest text-[#000d22] group-hover:gap-4 transition-all">
+                <div class="text-lg text-slate-600 leading-relaxed font-medium">
+                    {{ post.excerpt }}
+                </div>
+                <a href="{{ post.url | relative_url }}" class="inline-flex items-center gap-2 text-sm font-black uppercase tracking-widest text-[#000d22] group-hover:gap-4 transition-all">
                     Read Post <span class="material-symbols-outlined">north_east</span>
                 </a>
             </div>
         </article>
-
-        <!-- Blog Post 2 -->
-        <article class="group relative flex flex-col gap-4 pt-16 border-t border-slate-100">
-            <div class="flex items-center gap-4 text-xs font-bold uppercase tracking-[0.2em] text-vismo-accent">
-                <span>Feb 2026</span>
-                <span class="w-8 h-[1px] bg-slate-200"></span>
-                <span class="text-slate-400">Academia</span>
-            </div>
-            <div class="space-y-4">
-                <h2 class="text-3xl md:text-4xl font-extrabold text-[#000d22] group-hover:text-vismo-accent transition-colors leading-tight">
-                    Reflections on Harmonic Numbers and Generalizations
-                </h2>
-                <p class="text-lg text-slate-600 leading-relaxed font-medium">
-                    A brief summary of my recent research findings and what they mean for the field of analytic number theory.
-                </p>
-                <a href="#" class="inline-flex items-center gap-2 text-sm font-black uppercase tracking-widest text-[#000d22] group-hover:gap-4 transition-all">
-                    Read Post <span class="material-symbols-outlined">north_east</span>
-                </a>
-            </div>
-        </article>
+        {% endfor %}
 
     </div>

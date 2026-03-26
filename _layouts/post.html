@@ -1,0 +1,26 @@
+---
+layout: default
+---
+
+<article class="max-w-4xl mx-auto py-12">
+    <header class="mb-10 border-b border-slate-200 pb-8 text-center">
+        <div class="flex items-center justify-center gap-4 text-xs font-bold uppercase tracking-[0.2em] text-[#000d22] mb-4">
+            <span>{{ page.date | date: "%b %d, %Y" }}</span>
+            <span class="w-8 h-[1px] bg-slate-200"></span>
+            <span class="text-slate-400">{{ page.categories | join: ", " }}</span>
+        </div>
+        <h1 class="text-4xl md:text-5xl font-extrabold text-[#000d22] tracking-tighter mb-6 leading-tight">
+            {{ page.title }}
+        </h1>
+    </header>
+
+    <div class="prose prose-lg prose-slate max-w-none font-body text-slate-700 leading-relaxed">
+        {{ content }}
+    </div>
+
+    <div class="mt-16 pt-8 border-t border-slate-100 text-center">
+        <a href="{{ '/blog.html' | relative_url }}" class="inline-flex items-center gap-2 text-sm font-black uppercase tracking-widest text-slate-500 hover:text-[#000d22] transition-colors">
+            <span class="material-symbols-outlined">arrow_back</span> Back to Blog
+        </a>
+    </div>
+</article>
