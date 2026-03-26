@@ -16,6 +16,16 @@
             theme: { extend: { colors: { "primary": "#000d22", "primary-container": "#0a2342", "background": "#f7f9fc", "secondary": "#4b6173" }, fontFamily: { "headline": ["Manrope"], "body": ["Inter"] } } }
         }
     </script>
+    <!-- MathJax for LaTeX support -->
+    <script>
+        MathJax = {
+            tex: {
+                inlineMath: [['$', '$'], ['\\(', '\\)']],
+                displayMath: [['$$', '$$'], ['\\[', '\\]']]
+            }
+        };
+    </script>
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script>
     <style>
         .scholar-indigo-gradient {
             background: linear-gradient(135deg, #000d22 0%, #0a2342 100%);
