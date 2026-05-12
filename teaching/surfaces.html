@@ -1,1 +1,48 @@
+---
+layout: default
+title: Surface Visualizations
+---
 
+<main class="pt-10 pb-24 px-6 max-w-7xl mx-auto">
+    <!-- Geri Dön Butonu (Üst klasöre çıkmak için ../ kullanıyoruz) -->
+    <a href="../teaching.html" class="inline-flex items-center gap-2 text-slate-400 hover:text-[#0a2342] transition-colors text-xs font-bold uppercase tracking-widest mb-10">
+        <span class="material-symbols-outlined text-sm">arrow_back</span> Back to Teaching
+    </a>
+
+    <header class="mb-16">
+        <h1 class="font-headline text-5xl font-extrabold text-[#000d22] tracking-tighter mb-4 uppercase">Surface Gallery</h1>
+        <p class="text-lg text-slate-500 max-w-3xl leading-relaxed font-sans">
+            A specialized collection of 3D quadric surfaces and parametric plots. These animations are generated using <strong>Manim</strong> to provide geometric intuition for multivariable calculus.
+        </p>
+    </header>
+
+    <!-- FULL GRID GALLERY -->
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        
+        <!-- Yüzey 1 -->
+        <div class="flex flex-col group">
+            <div class="aspect-video bg-black rounded-2xl overflow-hidden border border-slate-200 shadow-sm transition-all group-hover:shadow-xl group-hover:border-blue-400 group-hover:-translate-y-1">
+                <!-- YouTube Video ID'sini buraya yaz -->
+                <iframe class="w-full h-full" src="https://www.youtube.com/embed/VIDEO_ID_1" frameborder="0" allowfullscreen></iframe>
+            </div>
+            <div class="mt-4">
+                <h3 class="font-bold text-[#000d22] text-lg">Hyperboloid of One Sheet</h3>
+                <p class="text-xs text-slate-500 mt-1 leading-relaxed">Tracing $x^2 + y^2 - z^2 = 1$ with dynamic cross-sections.</p>
+            </div>
+        </div>
+
+        <!-- Yüzey 2 -->
+        <div class="flex flex-col group">
+            <div class="aspect-video bg-black rounded-2xl overflow-hidden border border-slate-200 shadow-sm transition-all group-hover:shadow-xl group-hover:border-blue-400 group-hover:-translate-y-1">
+                <iframe class="w-full h-full" src="https://www.youtube.com/embed/VIDEO_ID_2" frameborder="0" allowfullscreen></iframe>
+            </div>
+            <div class="mt-4">
+                <h3 class="font-bold text-[#000d22] text-lg">Elliptic Paraboloid</h3>
+                <p class="text-xs text-slate-500 mt-1 leading-relaxed">Visualizing the traces on horizontal and vertical planes.</p>
+            </div>
+        </div>
+
+        <!-- Buraya yeni videoları aynı formatta ekleyebilirsin -->
+
+    </div>
+</main>
