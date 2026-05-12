@@ -1,48 +1,113 @@
 ---
 layout: default
-title: Surface Visualizations
+title: Surface Gallery
 ---
 
+<!-- MathJax Desteği -->
+<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
 <main class="pt-10 pb-24 px-6 max-w-7xl mx-auto">
-    <!-- Geri Dön Butonu (Üst klasöre çıkmak için ../ kullanıyoruz) -->
+    <!-- Geri Dön Butonu -->
     <a href="../teaching.html" class="inline-flex items-center gap-2 text-slate-400 hover:text-[#0a2342] transition-colors text-xs font-bold uppercase tracking-widest mb-10">
         <span class="material-symbols-outlined text-sm">arrow_back</span> Back to Teaching
     </a>
 
     <header class="mb-16">
         <h1 class="font-headline text-5xl font-extrabold text-[#000d22] tracking-tighter mb-4 uppercase">Surface Gallery</h1>
-        <p class="text-lg text-slate-500 max-w-3xl leading-relaxed font-sans">
-            A specialized collection of 3D quadric surfaces and parametric plots. These animations are generated using <strong>Manim</strong> to provide geometric intuition for multivariable calculus.
+        <p class="text-lg text-slate-500 max-w-3xl leading-relaxed">
+            A visual guide to 3D surfaces in \(\mathbb{R}^3\). These animations are generated using Manim to help students grasp the geometry of quadric surfaces.
         </p>
     </header>
 
-    <!-- FULL GRID GALLERY -->
-    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10">
         
-        <!-- Yüzey 1 -->
+        <!-- Surface a -->
         <div class="flex flex-col group">
             <div class="aspect-video bg-black rounded-2xl overflow-hidden border border-slate-200 shadow-sm transition-all group-hover:shadow-xl group-hover:border-blue-400 group-hover:-translate-y-1">
-                <!-- YouTube Video ID'sini buraya yaz -->
-                <iframe class="w-full h-full" src="https://www.youtube.com/embed/VIDEO_ID_1" frameborder="0" allowfullscreen></iframe>
+                <!-- Örnek: src="https://www.youtube.com/embed/S_N9Z9mS37M" -->
+                <iframe class="w-full h-full" src="https://www.youtube.com/embed/VIDEO_ID_A" frameborder="0" allowfullscreen></iframe>
             </div>
-            <div class="mt-4">
-                <h3 class="font-bold text-[#000d22] text-lg">Hyperboloid of One Sheet</h3>
-                <p class="text-xs text-slate-500 mt-1 leading-relaxed">Tracing $x^2 + y^2 - z^2 = 1$ with dynamic cross-sections.</p>
+            <div class="mt-5">
+                <span class="text-blue-600 font-black text-xs uppercase tracking-widest">Surface a</span>
+                <h3 class="font-bold text-[#000d22] text-xl mt-1">\(z = 2x - y\)</h3>
+                <p class="text-sm text-slate-500 font-medium uppercase tracking-tight">Plane</p>
             </div>
         </div>
 
-        <!-- Yüzey 2 -->
+        <!-- Surface b -->
         <div class="flex flex-col group">
             <div class="aspect-video bg-black rounded-2xl overflow-hidden border border-slate-200 shadow-sm transition-all group-hover:shadow-xl group-hover:border-blue-400 group-hover:-translate-y-1">
-                <iframe class="w-full h-full" src="https://www.youtube.com/embed/VIDEO_ID_2" frameborder="0" allowfullscreen></iframe>
+                <iframe class="w-full h-full" src="https://www.youtube.com/embed/VIDEO_ID_B" frameborder="0" allowfullscreen></iframe>
             </div>
-            <div class="mt-4">
-                <h3 class="font-bold text-[#000d22] text-lg">Elliptic Paraboloid</h3>
-                <p class="text-xs text-slate-500 mt-1 leading-relaxed">Visualizing the traces on horizontal and vertical planes.</p>
+            <div class="mt-5">
+                <span class="text-blue-600 font-black text-xs uppercase tracking-widest">Surface b</span>
+                <h3 class="font-bold text-[#000d22] text-xl mt-1">\(z = y^2 + 1\)</h3>
+                <p class="text-sm text-slate-500 font-medium uppercase tracking-tight">Parabolic Cylinder</p>
             </div>
         </div>
 
-        <!-- Buraya yeni videoları aynı formatta ekleyebilirsin -->
+        <!-- Surface c -->
+        <div class="flex flex-col group">
+            <div class="aspect-video bg-black rounded-2xl overflow-hidden border border-slate-200 shadow-sm transition-all group-hover:shadow-xl group-hover:border-blue-400 group-hover:-translate-y-1">
+                <iframe class="w-full h-full" src="https://www.youtube.com/embed/VIDEO_ID_C" frameborder="0" allowfullscreen></iframe>
+            </div>
+            <div class="mt-5">
+                <span class="text-blue-600 font-black text-xs uppercase tracking-widest">Surface c</span>
+                <h3 class="font-bold text-[#000d22] text-xl mt-1">\(x^2 + 4y^2 = 36\)</h3>
+                <p class="text-sm text-slate-500 font-medium uppercase tracking-tight">Elliptic Cylinder</p>
+            </div>
+        </div>
 
+        <!-- Surface d -->
+        <div class="flex flex-col group">
+            <div class="aspect-video bg-black rounded-2xl overflow-hidden border border-slate-200 shadow-sm transition-all group-hover:shadow-xl group-hover:border-blue-400 group-hover:-translate-y-1">
+                <iframe class="w-full h-full" src="https://www.youtube.com/embed/VIDEO_ID_D" frameborder="0" allowfullscreen></iframe>
+            </div>
+            <div class="mt-5">
+                <span class="text-blue-600 font-black text-xs uppercase tracking-widest">Surface d</span>
+                <h3 class="font-bold text-[#000d22] text-xl mt-1">\(y = 2 - x^2 - z^2\)</h3>
+                <p class="text-sm text-slate-500 font-medium uppercase tracking-tight">Circular Paraboloid</p>
+            </div>
+        </div>
+
+        <!-- Surface e -->
+        <div class="flex flex-col group">
+            <div class="aspect-video bg-black rounded-2xl overflow-hidden border border-slate-200 shadow-sm transition-all group-hover:shadow-xl group-hover:border-blue-400 group-hover:-translate-y-1">
+                <iframe class="w-full h-full" src="https://www.youtube.com/embed/VIDEO_ID_E" frameborder="0" allowfullscreen></iframe>
+            </div>
+            <div class="mt-5">
+                <span class="text-blue-600 font-black text-xs uppercase tracking-widest">Surface e</span>
+                <h3 class="font-bold text-[#000d22] text-xl mt-1">\(z^2 + x^2 - (y - 2)^2 = 0\)</h3>
+                <p class="text-sm text-slate-500 font-medium uppercase tracking-tight">Circular Cone</p>
+            </div>
+        </div>
+
+        <!-- Surface f -->
+        <div class="flex flex-col group">
+            <div class="aspect-video bg-black rounded-2xl overflow-hidden border border-slate-200 shadow-sm transition-all group-hover:shadow-xl group-hover:border-blue-400 group-hover:-translate-y-1">
+                <iframe class="w-full h-full" src="https://www.youtube.com/embed/VIDEO_ID_F" frameborder="0" allowfullscreen></iframe>
+            </div>
+            <div class="mt-5">
+                <span class="text-blue-600 font-black text-xs uppercase tracking-widest">Surface f</span>
+                <h3 class="font-bold text-[#000d22] text-xl mt-1">\(x^2 + 16y^2 + z^2 = 16\)</h3>
+                <p class="text-sm text-slate-500 font-medium uppercase tracking-tight">Ellipsoid</p>
+            </div>
+        </div>
+
+        <!-- Surface g: Hyperbolic Paraboloid (SOON) -->
+        <div class="flex flex-col group opacity-60">
+            <div class="aspect-video bg-slate-100 rounded-2xl flex items-center justify-center border border-dashed border-slate-300">
+                <div class="text-center text-slate-400">
+                    <span class="material-symbols-outlined text-4xl block mb-2">pending</span>
+                    <span class="text-[10px] font-bold uppercase tracking-widest">Coming Soon</span>
+                </div>
+            </div>
+            <div class="mt-5">
+                <span class="text-slate-400 font-black text-xs uppercase tracking-widest">Surface g</span>
+                <h3 class="font-bold text-slate-400 text-xl mt-1">Hyperbolic Paraboloid</h3>
+                <p class="text-sm text-slate-400 font-medium uppercase tracking-tight">Saddle Surface</p>
+            </div>
+        </div>
     </div>
 </main>
