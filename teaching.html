@@ -1,116 +1,100 @@
 ---
 layout: default
-title: Teaching
+title: Surface Gallery
 ---
 
-<header class="mb-12">
-        <h1 class="font-headline text-5xl font-extrabold text-[#000d22] tracking-tighter mb-4 uppercase">Teaching Experience</h1>
-        <div class="inline-flex items-center gap-2 px-4 py-2 bg-blue-50 border border-blue-100 rounded-full text-blue-700 text-xs font-bold uppercase tracking-wide">
-            <span class="relative flex h-2 w-2">
-              <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-blue-400 opacity-75"></span>
-              <span class="relative inline-flex rounded-full h-2 w-2 bg-blue-600"></span>
-            </span>
-            Currently main instructor for MAT104E
-        </div>
+<!-- MathJax Desteği (Formüllerin şık görünmesi için) -->
+<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+<main class="pt-10 pb-24 px-6 max-w-7xl mx-auto">
+    <!-- Geri Dön Butonu -->
+    <a href="../teaching.html" class="inline-flex items-center gap-2 text-slate-400 hover:text-[#0a2342] transition-colors text-xs font-bold uppercase tracking-widest mb-10">
+        <span class="material-symbols-outlined text-sm">arrow_back</span> Back to Teaching
+    </a>
+
+    <header class="mb-16">
+        <h1 class="font-headline text-5xl font-extrabold text-[#000d22] tracking-tighter mb-4 uppercase">Surface Gallery</h1>
+        <p class="text-lg text-slate-500 max-w-3xl leading-relaxed">
+            A visual guide to 3D surfaces in \(\mathbb{R}^3\). These animations help visualize traces, intersections, and the fundamental geometry of quadric surfaces.
+        </p>
     </header>
 
-    <!-- WORK EXPERIENCE -->
-    <section class="space-y-4 mb-20 text-sm">
-        <div class="bg-white p-6 rounded-2xl border border-slate-100 shadow-sm flex flex-col md:flex-row justify-between gap-4">
-            <div class="flex-1">
-                <h3 class="font-bold text-[#000d22] text-lg leading-tight uppercase tracking-tight">Research and Teaching Assistant @ ITU</h3>
-                <p class="text-[10px] text-slate-400 mt-1 uppercase tracking-widest font-bold">2018 – </p>
-                <ul class="mt-4 grid grid-cols-1 md:grid-cols-2 gap-x-6 gap-y-2 text-slate-600 list-disc ml-4 font-semibold">
-                    <li>MAT103E / MAT104E (Calculus I-II)</li>
-                    <li>MAT185E (Mathematics I for Math Majors)</li>
-                    <li>MAT186E (Mathematics II for Math Majors)</li>
-                    <li>MAT287E (Multivariable Calculus)</li>
-                </ul>
+    <!-- FULL GRID GALLERY -->
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10">
+        
+        <!-- Surface a -->
+        <div class="flex flex-col group">
+            <div class="aspect-video bg-black rounded-2xl overflow-hidden border border-slate-200 shadow-sm transition-all group-hover:shadow-xl group-hover:border-blue-400 group-hover:-translate-y-1">
+                <!-- YouTube Video ID'sini buraya yaz -->
+                <iframe class="w-full h-full" src="https://www.youtube.com/embed/VIDEO_ID_A" frameborder="0" allowfullscreen></iframe>
+            </div>
+            <div class="mt-5">
+                <span class="text-blue-600 font-black text-xs uppercase tracking-widest">Surface a</span>
+                <h3 class="font-bold text-[#000d22] text-xl mt-1">\(z = 2x - y\)</h3>
+                <p class="text-sm text-slate-500 font-medium">Plane</p>
             </div>
         </div>
-        <div class="bg-white p-6 rounded-2xl border border-slate-100 shadow-sm flex flex-col md:flex-row justify-between gap-4 text-right">
-            <div class="flex-1 text-left">
-                <h3 class="font-bold text-[#000d22] text-lg leading-tight uppercase tracking-tight">Teaching Assistant @ Koç University</h3>
-                <p class="text-[10px] text-slate-400 mt-1 uppercase tracking-widest font-bold">2016 – 2018</p>
-                <ul class="mt-4 grid grid-cols-1 md:grid-cols-2 gap-x-6 gap-y-2 text-slate-600 list-disc ml-4 font-semibold">
-                    <li>Math 101 Finite Mathematics</li>
-                    <li>Math 102 Calculus</li>
-                    <li>Math 106 Calculus for Engineers</li>
-                    <li>Math 203 Multivariable Calculus</li>
-                </ul>
-            </div>
-            <div class="flex items-end"><p class="text-[9px] font-bold text-slate-300 uppercase tracking-widest leading-none">* Taught in English</p></div>
-        </div>
-    </section>
 
-    <!-- PROBLEM SETS & RESOURCES ARCHIVE -->
-    <section class="mb-24">
-        <h2 class="font-headline text-2xl font-bold text-[#000d22] mb-8 flex items-center gap-3">
-            <span class="material-symbols-outlined text-primary">folder_open</span>
-            Problem Sets & Resources
-        </h2>
-        <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
-            <div class="bg-white p-8 rounded-3xl border border-slate-100 shadow-sm">
-                <div class="flex items-center gap-3 mb-6">
-                    <span class="p-2 bg-purple-50 text-purple-600 rounded-lg font-bold text-[10px]">MAT104E</span>
-                    <h3 class="font-bold text-[#000d22]">Calculus II</h3>
-                </div>
-                <div class="space-y-3">
-                    <!-- GÜNCELLENEN DOSYA YOLU -->
-                    <a href="materials/Sequences%20and%20Series%20Cheat%20Sheet.pdf" target="_blank" class="flex items-center justify-between p-4 bg-blue-50/50 rounded-2xl group hover:bg-[#000d22] transition-all cursor-pointer border border-blue-100/50 hover:border-transparent">
-                        <div class="flex items-center gap-3">
-                            <span class="material-symbols-outlined text-blue-600 group-hover:text-white transition-colors">auto_awesome</span>
-                            <span class="text-sm font-bold text-slate-800 group-hover:text-white transition-colors">Sequences & Series Cheat Sheet</span>
-                        </div>
-                        <span class="text-[10px] font-black uppercase tracking-widest bg-white text-primary px-3 py-1 rounded shadow-sm group-hover:bg-blue-50 transition-colors">PDF</span>
-                    </a>
-                    <a href="materials/PolarCoordinates24.03.26.pdf" target="_blank" class="flex items-center justify-between p-4 bg-slate-50 rounded-2xl group hover:bg-[#000d22] transition-all cursor-pointer">
-                        <div class="flex items-center gap-3">
-                            <span class="material-symbols-outlined text-slate-400 group-hover:text-white transition-colors">description</span>
-                            <span class="text-sm font-semibold text-slate-700 group-hover:text-white transition-colors">Polar Coordinates Problem Set</span>
-                        </div>
-                        <span class="text-[10px] font-black uppercase tracking-widest bg-white text-primary px-3 py-1 rounded shadow-sm group-hover:bg-blue-50 transition-colors">PDF</span>
-                    </a>
-                </div>
+        <!-- Surface b -->
+        <div class="flex flex-col group">
+            <div class="aspect-video bg-black rounded-2xl overflow-hidden border border-slate-200 shadow-sm transition-all group-hover:shadow-xl group-hover:border-blue-400 group-hover:-translate-y-1">
+                <iframe class="w-full h-full" src="https://www.youtube.com/embed/VIDEO_ID_B" frameborder="0" allowfullscreen></iframe>
+            </div>
+            <div class="mt-5">
+                <span class="text-blue-600 font-black text-xs uppercase tracking-widest">Surface b</span>
+                <h3 class="font-bold text-[#000d22] text-xl mt-1">\(z = y^2 + 1\)</h3>
+                <p class="text-sm text-slate-500 font-medium">Parabolic Cylinder</p>
             </div>
         </div>
-    </section>
 
-   <!-- MANIM SURFACE PREVIEW -->
-    <section class="mb-24 p-10 bg-[#000d22] rounded-[2.5rem] shadow-2xl relative overflow-hidden text-white">
-        <div class="absolute inset-0 bg-blue-500/5 mix-blend-overlay"></div>
-        <div class="relative z-10">
-            <header class="mb-10 flex flex-col md:flex-row items-center justify-between gap-6">
-                <div>
-                    <h2 class="font-headline text-3xl font-extrabold mb-2 uppercase tracking-tight">3D Visualizations</h2>
-                    <p class="text-slate-400 text-sm">Visualizing mathematical surfaces for MAT104E.</p>
-                </div>
-                <!-- YENİ OLUŞTURDUĞUN SAYFAYA LİNK -->
-                <a href="teaching/surfaces.html" class="flex items-center gap-2 px-6 py-3 bg-blue-600 hover:bg-blue-500 text-white rounded-xl text-xs font-black uppercase tracking-widest transition-all shadow-lg">
-                    Explore Full Gallery <span class="material-symbols-outlined text-sm">arrow_forward</span>
-                </a>
-            </header>
-            
-            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
-                <!-- Sadece en iyi 2 videonun önizlemesi -->
-                <div class="aspect-video bg-black rounded-2xl overflow-hidden border border-white/10">
-                    <iframe class="w-full h-full opacity-80" src="https://www.youtube.com/embed/VIDEO_ID_1" frameborder="0" allowfullscreen></iframe>
-                </div>
-                <div class="aspect-video bg-black rounded-2xl overflow-hidden border border-white/10">
-                    <iframe class="w-full h-full opacity-80" src="https://www.youtube.com/embed/VIDEO_ID_2" frameborder="0" allowfullscreen></iframe>
-                </div>
+        <!-- Surface c -->
+        <div class="flex flex-col group">
+            <div class="aspect-video bg-black rounded-2xl overflow-hidden border border-slate-200 shadow-sm transition-all group-hover:shadow-xl group-hover:border-blue-400 group-hover:-translate-y-1">
+                <iframe class="w-full h-full" src="https://www.youtube.com/embed/VIDEO_ID_C" frameborder="0" allowfullscreen></iframe>
+            </div>
+            <div class="mt-5">
+                <span class="text-blue-600 font-black text-xs uppercase tracking-widest">Surface c</span>
+                <h3 class="font-bold text-[#000d22] text-xl mt-1">\(x^2 + 4y^2 = 36\)</h3>
+                <p class="text-sm text-slate-500 font-medium">Elliptic Cylinder</p>
             </div>
         </div>
-    </section>
 
-    <!-- PROFICIENCY -->
-    <section class="p-8 bg-[#000d22] rounded-[2rem] text-white flex flex-col md:flex-row justify-between items-center gap-8 shadow-xl">
-        <h2 class="text-lg font-bold flex items-center gap-2"><span class="material-symbols-outlined text-sm">language</span> Language Proficiency</h2>
-        <div class="flex gap-12">
-            <div class="text-center"><div class="text-3xl font-extrabold tracking-tighter">85.0</div><div class="text-[9px] uppercase font-bold text-slate-500 tracking-widest mt-1">YDS Score</div></div>
-            <div class="text-center border-l border-white/10 pl-12 flex flex-col items-center">
-                <div class="flex items-center gap-2"><span class="material-symbols-outlined text-blue-400 font-bold">verified</span><span class="text-xl font-bold tracking-tight uppercase">Taken</span></div>
-                <div class="text-[9px] uppercase font-bold text-slate-500 tracking-widest mt-1">TOEFL IBT</div>
+        <!-- Surface d -->
+        <div class="flex flex-col group">
+            <div class="aspect-video bg-black rounded-2xl overflow-hidden border border-slate-200 shadow-sm transition-all group-hover:shadow-xl group-hover:border-blue-400 group-hover:-translate-y-1">
+                <iframe class="w-full h-full" src="https://www.youtube.com/embed/VIDEO_ID_D" frameborder="0" allowfullscreen></iframe>
+            </div>
+            <div class="mt-5">
+                <span class="text-blue-600 font-black text-xs uppercase tracking-widest">Surface d</span>
+                <h3 class="font-bold text-[#000d22] text-xl mt-1">\(y = 2 - x^2 - z^2\)</h3>
+                <p class="text-sm text-slate-500 font-medium">Circular Paraboloid</p>
             </div>
         </div>
-    </section>
+
+        <!-- Surface e -->
+        <div class="flex flex-col group">
+            <div class="aspect-video bg-black rounded-2xl overflow-hidden border border-slate-200 shadow-sm transition-all group-hover:shadow-xl group-hover:border-blue-400 group-hover:-translate-y-1">
+                <iframe class="w-full h-full" src="https://www.youtube.com/embed/VIDEO_ID_E" frameborder="0" allowfullscreen></iframe>
+            </div>
+            <div class="mt-5">
+                <span class="text-blue-600 font-black text-xs uppercase tracking-widest">Surface e</span>
+                <h3 class="font-bold text-[#000d22] text-xl mt-1">\(z^2 + x^2 - (y - 2)^2 = 0\)</h3>
+                <p class="text-sm text-slate-500 font-medium">Circular Cone</p>
+            </div>
+        </div>
+
+        <!-- Surface f -->
+        <div class="flex flex-col group">
+            <div class="aspect-video bg-black rounded-2xl overflow-hidden border border-slate-200 shadow-sm transition-all group-hover:shadow-xl group-hover:border-blue-400 group-hover:-translate-y-1">
+                <iframe class="w-full h-full" src="https://www.youtube.com/embed/VIDEO_ID_F" frameborder="0" allowfullscreen></iframe>
+            </div>
+            <div class="mt-5">
+                <span class="text-blue-600 font-black text-xs uppercase tracking-widest">Surface f</span>
+                <h3 class="font-bold text-[#000d22] text-xl mt-1">\(x^2 + 16y^2 + z^2 = 16\)</h3>
+                <p class="text-sm text-slate-500 font-medium">Ellipsoid</p>
+            </div>
+        </div>
+
+    </div>
+</main>
